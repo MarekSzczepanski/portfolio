@@ -32,16 +32,17 @@ html {
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-color: #F8F8ff;
+  font-family: 'Bungee', sans-serif;
 }
 a {
   background-color: transparent;
@@ -72,10 +73,16 @@ dfn {
 }
 h1 {
   margin: 0;
-  margin-bottom: 3rem;
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
+  font-size: 6vw;
+  position: relative;
+  z-index: 2;
+}
+h2 {
+  margin: 0;
+  font-size: 3.6vw;
 }
 h1 > b {
   color: var(--color-primary);

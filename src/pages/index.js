@@ -1,128 +1,82 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import styled from "styled-components"
+import { keyframes } from "styled-components"
+import Image from '../components/Image'
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const Morph = keyframes`
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  25% { border-radius: 57% 43% 40% 60% / 71% 48% 52% 29%; }
+  50% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+  67% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
+  80% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+`
+const Move = (data) => keyframes`
+  0% { transform: translate(${data.x1}, ${data.y1}), rotate(0deg) }
+  25% { transform: translate(${data.x2}, ${data.y2}) rotate(90deg) }
+  50% { transform: translate(${data.x3}, ${data.y3}) rotate(180deg) }
+  75% { transform: translate(${data.x4}, ${data.y4}) rotate(270deg) }
+  100% { transform: translate(${data.x5}, ${data.y5}), rotate(360deg) }
+`
+const Wrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: ${props => props.justify ? props.justify : 'center'};
+  margin-top: 5vw;
+`
+const Circle = styled.div`
+  position: ${props => props.position ? props.position : 'absolute'};
+  top: ${props => props.top ? props.top : '0'};
+  left: ${props => props.left? props.left : '0'};
+  width: ${props => props.measure};
+  height: ${props => props.measure};
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  background-color: ${props => props.color};
+  overflow: hidden;
+  animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : null}, ${props => props.noMove ? null : Move(props.translate)} 13s linear infinite;
+`
+const About = styled.h4`
+  font-size: 1.1vw;
+  max-width: 45vw;
+`
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+const ProfileImage = () => {
+  return (
+    <Image
+      src="me.jpg"
+      alt="profile"
+      style={{
+        height: '100%',
+      }}
+    />
+  );
+};
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <Wrap className="wrap" justify="space-between">
+      <div>
+        <h1>Marek <br /> Szczepański</h1>
+        <h2>Frontend Developer</h2>
+        <About>I'm settled in Ostróda, Poland. I have 3 years of experience with the Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited. </About>
+      </div>
+      <Circle className="circle" noMove={true} measure="30vw" position="static">
+        <ProfileImage src="../images/me.jpg" alt="profile"></ProfileImage>
+      </Circle>
+    </Wrap>
+    <Wrap className="wrap" justify="space-between">
+      <Circle className="circle" color="royalblue" measure="12vw" top="3vw" left="22vw" delay="-3s" translate={{x1: '1px', x2: '40px', x3: '90px', x4: '40px', x5: '1px', y1: '1px', y2: '40px', y3: '90px', y4: '40px', y5: '1px'}}></Circle>
+    </Wrap>
+    <Wrap className="wrap" justify="space-between">
+      <Circle className="circle" color="gold" measure="10vw" top="25vw" left="60vw" delay="-5s" translate={{x1: '1px', x2: '-10px', x3: '15px', x4: '-40px', x5: '1px', y1: '1px', y2: '-20px', y3: '10px', y4: '40px', y5: '-10px'}}></Circle>
+    </Wrap>
+    <Wrap className="wrap" justify="space-between">
+      <Circle className="circle" color="crimson" measure="13vw" top="4vw" left="85vw" delay="-3s" translate={{x1: '1px', x2: '-25px', x3: '-80px', x4: '-10px', x5: '5px', y1: '-15px', y2: '-40px', y3: '-10px', y4: '10px', y5: '-20px'}}></Circle>
+    </Wrap>
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
-
 export default IndexPage
