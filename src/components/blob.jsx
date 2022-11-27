@@ -48,7 +48,7 @@ const Circle = styled.div`
   border: solid 3px ${props => props.border ? props.border : '#000'};
   overflow: hidden;
   transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
-  animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.noMove ? null : Move(props.translate)} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   z-index: ${props => props.zIndex ? props.zIndex : 0};
   @media (max-width: 1023px) {
     position: absolute;
@@ -56,6 +56,7 @@ const Circle = styled.div`
     left: ${props => props.mLeft};
     width: ${props => props.mMeasure};
     height: ${props => props.mMeasure};
+    animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.mTranslate ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   }
   > div {
     width: 100%;
@@ -64,6 +65,9 @@ const Circle = styled.div`
 const Text = styled.span`
   animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
+  @media (max-width: 1023px) {
+    font-size: 13px;
+  }
 `
 
 const ProfileImage = () => {
@@ -78,10 +82,10 @@ const ProfileImage = () => {
     );
   };
 
-const Blob = ({ color, measure, top, left, delay, mMeasure, mTop, mLeft, translate, noMove, image, position, border, text, skill, zIndex, fontSize }) => {
+const Blob = ({ color, measure, top, left, delay, mMeasure, mTop, mLeft, translate, mTranslate, noMove, image, position, border, text, skill, zIndex, fontSize }) => {
     return ( 
         <Wrap>
-            <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex}>
+            <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} mTranslate={mTranslate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex}>
                 {image ? <ProfileImage></ProfileImage> : null}
                 {text ? <Text delay={delay} fontSize={fontSize}>{text}</Text> : null}
             </Circle>
