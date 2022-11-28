@@ -13,8 +13,12 @@ const Image = ({ src, ...rest }) => {
             extension
             publicURL
             childImageSharp {
-              fluid(maxWidth: 600) {
-                ...GatsbyImageSharpFluid
+              fluid(maxWidth: 500, quality: 100) {
+                src
+                srcSet
+                aspectRatio
+                sizes
+                base64
               }
             }
           }
