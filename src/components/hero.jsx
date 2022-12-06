@@ -12,6 +12,8 @@ const nameLetters = ['M', 'a', 'r', 'e', 'k'];
 const surnameLetters = ['S', 'z', 'c', 'z', 'e', 'p', 'a', 'ń', 's', 'k', 'i'];
 const letters2 = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
 
+const colors = ['#FF003F', 'gold', '#6787E7', '#74B72E', 'orange', 'plum'];
+
 const About = styled.h4`
   font-size: 1vw;
   max-width: 45vw;
@@ -25,30 +27,32 @@ const About = styled.h4`
   }
 `
 
-const Bounce = keyframes`
-0% { transform: scale(1, 1) }
-10% { transform: scale(2, 0.5) }
-15% { transform: scale(1, 1) }
-25% { transform: scale(1.8, 0.7) }
-30% { transform: scale(1, 1) }
-40% { transform: scale(1.7, 0.75) }
-45% { transform: scale(1, 1) }
-55% { transform: scale(1.5, 0.85) }
-60% { transform: scale(1, 1) }
-70% { transform: scale(1.4, 0.9) }
-75% { transform: scale(1, 1) }
-85% { transform: scale(1.2, 0.94) }
-90% { transform: scale(1, 1) }
-95% { transform: scale(1.1, 0.97) }
-100% { transform: scale(1, 1) }
+const Bounce = (color) => keyframes`
+  0% { transform: scale(1, 1); color: ${color}; }
+  10% { transform: scale(2, 0.5) }
+  15% { transform: scale(1, 1) }
+  25% { transform: scale(1.8, 0.7) }
+  30% { transform: scale(1, 1) }
+  40% { transform: scale(1.7, 0.75); color: ${color}; }
+  45% { transform: scale(1, 1) }
+  55% { transform: scale(1.5, 0.85) }
+  60% { transform: scale(1, 1) }
+  70% { transform: scale(1.4, 0.9) }
+  75% { transform: scale(1, 1) }
+  85% { transform: scale(1.2, 0.94) }
+  90% { transform: scale(1, 1) }
+  95% { transform: scale(1.1, 0.97) }
+  100% { transform: scale(1, 1) }
 `
 
 const Letter = styled.span`
-display: inline-block;
-position: relative;
-transition: transform .2s linear;
-animation: ${props => props.bounce ? Bounce : null} 1s linear;
+  display: inline-block;
+  position: relative;
+  transition: transform 1s linear;
+  animation: ${props => props.bounce ? Bounce(props.color) : null} 1s linear;
 `
+
+const lock = [null, null, null, null, null, null];
 
 const Hero = () => {
   const [isLetterHovered, setIsLetterHovered] = useState(0);
@@ -65,21 +69,27 @@ const Hero = () => {
     if (isLetterHovered) {
       arr[isLetterHovered].current = true;
       setIsLetterHovered(null);
-      setTimeout(() => { arr[isLetterHovered].current = null}, 1000);
+      setTimeout(() => { arr[isLetterHovered].current = null }, 1000);
     }
   }, [isLetterHovered])
 
-  const handleMouseEnter = (e) => {
-    setIsLetterHovered(Number(e.target.dataset.letter));
-  }
+  const handleMouseMove = (e) => {
+    if (e.target.dataset.letter) {
 
+      if (!lock[Number(e.target.dataset.letter)]) {
+        setIsLetterHovered(Number(e.target.dataset.letter));
+        lock[Number(e.target.dataset.letter)] = true;
+        setTimeout(() => { lock[Number(e.target.dataset.letter)] = null }, 1000);
+      }  
+    }
+  }
 
   return (
     <>
       <div>
-        <h1 role='presentation'>
+        <h1 role='presentation' onMouseMove={handleMouseMove}>
         {nameLetters.map(function(object, i) {
-          return <Letter onMouseEnter={handleMouseEnter} bounce={arr[i+1].current} data-letter={i+1} key={i+1}>{nameLetters[i]}</Letter>;
+          return <Letter bounce={arr[i+1].current} color={colors[i]} data-letter={i+1} key={i}>{nameLetters[i]}</Letter>;
         })}
           <br />
            Szczepański
@@ -96,4 +106,3 @@ const Hero = () => {
 }
 
 export default Hero
-
