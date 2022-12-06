@@ -71,26 +71,26 @@ const Text = styled.span`
 `
 
 const ProfileImage = () => {
-    return (
-      <Image
-        src="me.jpg"
-        alt="profile"
-        style={{
-          height: '100%',
-        }}
-      />
-    );
-  };
+  return (
+    <Image
+      src="me.jpg"
+      alt="profile"
+      style={{
+        height: '100%',
+      }}
+    />
+  );
+};
 
 const Blob = ({ color, measure, top, left, delay, mMeasure, mTop, mLeft, translate, mTranslate, noMove, image, position, border, text, skill, zIndex, fontSize }) => {
-    return ( 
-        <Wrap>
-            <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} mTranslate={mTranslate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex}>
-                {image ? <ProfileImage></ProfileImage> : null}
-                {text ? <Text delay={delay} fontSize={fontSize}>{text}</Text> : null}
-            </Circle>
-        </Wrap>
-    )
+  return ( 
+    <Wrap>
+      <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} mTranslate={mTranslate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex}>
+        {image ? <ProfileImage></ProfileImage> : null}
+        {text ? <Text delay={delay} fontSize={fontSize}>{text}</Text> : null}
+      </Circle>
+    </Wrap>
+  )
 }
 
 export default Blob;
