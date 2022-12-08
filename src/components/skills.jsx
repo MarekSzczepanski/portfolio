@@ -14,7 +14,9 @@ const skills = ['html', 'css', 'git', 'mysql', 'mongodb', 'express', 'cypress', 
 const colors = ['#FF003F', 'gold', '#6787E7', '#74B72E', 'orange', 'plum', '#FF003F', 'gold', '#6787E7', '#74B72E', 'orange', 'plum', '#FF003F', 'gold', '#6787E7', '#74B72E', 'orange',];
 
 const SkillsContainer = styled.div`
-  position: relative;
+  position: absolute;
+  top: 5vw;
+  left: 0;
   flex-wrap: wrap;
   height: 600px;
   font-size: 1vw;

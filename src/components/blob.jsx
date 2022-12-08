@@ -88,8 +88,8 @@ const Circle = styled.div`
   animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
   z-index: ${props => props.zIndex ? props.zIndex : 0};
   &:hover {
-    animation:${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite, ${props => props.colorChange ? blackAndWhiteText : null} .3s linear infinite alternate;
-    cursor: pointer;
+    animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite, ${props => props.colorChange ? blackAndWhiteText : null} .3s linear infinite alternate;
+    cursor: ${props => props.colorChange ? 'pointer' : null};
   }
   @media (max-width: 1023px) {
     position: absolute;
