@@ -14,7 +14,7 @@
   --font-sx: 12px;
   --line-height-loose: 1.75;
   --line-height-normal: 1.5;
-  --line-height-dense: 1.1;
+  --line-height-dense: 1;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -42,7 +42,7 @@ body {
   margin: 0;
   word-wrap: break-word;
   background-color: #F8F8ff;
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Bungee';
 }
 a {
   background-color: transparent;
@@ -72,18 +72,21 @@ dfn {
   font-style: italic;
 }
 h1 {
+  position: relative;
   margin: 50px 0 0;
   padding: 0;
-  line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
+  font-family: 'Rubik Spray Paint';
   font-size: 6vw;
-  position: relative;
+  line-height: 6vw;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
   z-index: 2;
 }
 h2 {
+  position: relative;
   margin: 0;
   font-size: 3.6vw;
-  position: relative;
+  font-family: 'Rubik Spray Paint';
   z-index: 2;
 }
 h1 > b {

@@ -47,9 +47,9 @@ module.exports = {
         preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
         web: [
           {
-            name: `Bungee`,
-            file: `https://fonts.googleapis.com/css2?family=Bungee&display=swap`,
-          },
+            name: `Fonts`,
+            file: `https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Spray+Paint&display=swap`,
+          }
         ],
       },
     },
