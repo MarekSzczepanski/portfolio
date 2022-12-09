@@ -21,7 +21,7 @@ const SkillsContainer = styled.div`
   height: 600px;
   font-size: 1vw;
   @media (max-width: 1023px) {
-    position: static;
+    top: 60px;
   }
 `
 

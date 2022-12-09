@@ -17,12 +17,16 @@ const SkillsH3 = styled.h3`
   width: 62%;
   @media (max-width: 1023px) {
     width: 100%;
+    font-size: 30px;
   }
 `
 const ExperienceH3 = styled.h3`
   width: 38%;
   @media (max-width: 1023px) {
-    margin-top: 550px;
+    width: unset;
+    margin-top: 520px;
+    margin-bottom: 8px;
+    font-size: 30px;
   }
 `
 

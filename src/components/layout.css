@@ -71,24 +71,6 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  position: relative;
-  margin: 50px 0 0;
-  padding: 0;
-  font-family: 'Rubik Spray Paint';
-  font-size: 6vw;
-  line-height: 6vw;
-  letter-spacing: -0.01em;
-  text-transform: capitalize;
-  z-index: 2;
-}
-h2 {
-  position: relative;
-  margin: 0;
-  font-size: 3.6vw;
-  font-family: 'Rubik Spray Paint';
-  z-index: 2;
-}
 h1 > b {
   color: var(--color-primary);
 }
@@ -231,34 +213,10 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
-h3 {
-  font-size: 2.5vw;
-}
-h5 {
-  font-size: 1.5vw;
-}
-h6 {
-  font-size: 1.2vw;
-}
 h5, h6 {
   margin: 0 0 4px 0;
 }
 ul {
   margin-left: 0;
-}
-li {
-  margin-bottom: 4px;
-  font-size: 1vw;
-  color: #555;
-}
-
-@media (max-width: 1023px) {
-  h1 {
-    font-size: 40px;
-    line-height: 46px;
-    margin-top: 86px;
-  }
-  h2 {
-    font-size: 26px;
-  }
+  margin-bottom: 40px;
 }

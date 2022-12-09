@@ -4,6 +4,32 @@ import styled from "styled-components";
 import { keyframes } from "styled-components";
 import Blob from "../components/blob";
 
+const H1 = styled.h1`
+  position: relative;
+  margin: 50px 0 0;
+  padding: 0;
+  font-family: 'Rubik Spray Paint';
+  font-size: 6vw;
+  line-height: 6vw;
+  letter-spacing: -0.01em;
+  text-transform: capitalize;
+  z-index: 2;
+  @media(max-width: 1023px) {
+    font-size: 40px;
+    line-height: 46px;
+    margin-top: 86px;
+  }
+`
+const H2 = styled.h2`
+  position: relative;
+  margin: 0;
+  font-size: 3.6vw;
+  font-family: 'Rubik Spray Paint';
+  z-index: 2;
+  @media(max-width: 1023px) {
+    font-size: 26px;
+  }
+`
 const About = styled.h4`
   font-size: 1vw;
   max-width: 45vw;
@@ -92,16 +118,16 @@ const Hero = () => {
   return (
     <>
       <div >
-        <h1 role='presentation'>
+        <H1 role='presentation'>
           {nameLetters.map(function(object, i) {
             return object.length === 1 ? <Letter onMouseEnter={handleMouseEnter} bounce={nameRefs[i+1].current} color={colors[i]} data-letter={i+1} key={i}>{nameLetters[i]}</Letter> : <br></br>;
           })}
-        </h1>
-        <h2>
+        </H1>
+        <H2>
           {titleLetters.map(function(object, i) {
             return object.length === 1 ? <Letter onMouseEnter={handleMouseEnter} bounce={nameRefs[i+1+nameLetters.length].current} color={colors2[i]} data-letter={i+1+nameLetters.length} key={i+nameLetters.length}>{titleLetters[i]}</Letter> : <span> </span>;
           })}
-        </h2>
+        </H2>
         <About>I'm settled in Ostróda, Poland. I have 3 years of experience with Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited. </About>
       </div>
       <Blob noMove={true} color="gray" measure="30vw" top="100px" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={true}></Blob>
