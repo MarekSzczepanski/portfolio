@@ -255,10 +255,10 @@ li {
 @media (max-width: 1023px) {
   h1 {
     font-size: 40px;
-    line-height: 54px;
-    margin-top: 80px;
+    line-height: 46px;
+    margin-top: 86px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 26px;
   }
 }
