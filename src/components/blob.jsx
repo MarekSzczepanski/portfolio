@@ -32,6 +32,17 @@ const Move2 = (translate) => keyframes`
   75% { transform: translate(${translate.x7}, ${translate.y7}) rotate(270deg) scale(1, .7);}
   87.5% { transform: translate(${translate.x8}, ${translate.y8}) rotate(315deg) scale(.7, .6);}
   100% { transform: translate(${translate.x9}, ${translate.y9}) rotate(360deg) scale(.8, .6);}
+  @media (max-width: 1023px) {
+    0% { transform: translate(${translate.x1}, ${translate.y1}) rotate(0deg) scale(.9, .7);}
+    12.5% { transform: translate(${translate.x2}, ${translate.y2}) rotate(45deg) scale(1, .8);}
+    25% { transform: translate(${translate.x3}, ${translate.y3}) rotate(90deg) scale(1.1, .9);}
+    37.5% { transform: translate(${translate.x4}, ${translate.y4}) rotate(135deg) scale(1.1, .8);}
+    50% { transform: translate(${translate.x5}, ${translate.y5}) rotate(180deg) scale(1, .9);}
+    62.5% { transform: translate(${translate.x6}, ${translate.y6}) rotate(225deg) scale(1.1, .8);}
+    75% { transform: translate(${translate.x7}, ${translate.y7}) rotate(270deg) scale(1, .9);}
+    87.5% { transform: translate(${translate.x8}, ${translate.y8}) rotate(315deg) scale(.8, .9);}
+    100% { transform: translate(${translate.x9}, ${translate.y9}) rotate(360deg) scale(.9, .7);}
+  }
 `
 const blackAndWhiteText = () => keyframes`
   from {color: white}
@@ -85,10 +96,19 @@ const Circle = styled.div`
   color: ${props => props.colorChange ? 'white' : 'black'};
   overflow: hidden;
   transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
-  animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
+  animation: 
+  ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+  ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
+  ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
+  ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
   z-index: ${props => props.zIndex ? props.zIndex : 0};
   &:hover {
-    animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite, ${props => props.colorChange ? blackAndWhiteText : null} .3s linear infinite alternate;
+    animation: 
+    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+    ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
+    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
+    ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
+    ${props => props.colorChange ? blackAndWhiteText : null} .3s linear infinite alternate;
     cursor: ${props => props.colorChange ? 'pointer' : null};
   }
   @media (max-width: 1023px) {
@@ -97,14 +117,18 @@ const Circle = styled.div`
     left: ${props => props.mLeft};
     width: ${props => props.mMeasure};
     height: ${props => props.mMeasure};
-    animation: ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, ${props => props.mTranslate ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+    animation: 
+    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
+    ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
+    ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   }
   > div {
     width: 100%;
   }
 `
 const Text = styled.span`
-  animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
   @media (max-width: 1023px) {
     font-size: 13px;
@@ -128,7 +152,7 @@ const Blob = ({ color, measure, top, left, delay, mMeasure, mTop, mLeft, transla
     <Wrap>
       <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} mTranslate={mTranslate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex} colorChange={colorChange}>
         {image ? <ProfileImage></ProfileImage> : null}
-        {text ? <Text delay={delay} fontSize={fontSize}>{text}</Text> : null}
+        {text ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
       </Circle>
     </Wrap>
   )
