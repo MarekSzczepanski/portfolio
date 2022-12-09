@@ -17,7 +17,7 @@ const Experience = () => (
                 <li>Writing custom Javascript code</li>
                 <li>Manual testing</li>
                 <li>Recording tutorial videos</li>
-            <   li>Meetings with clients</li>
+                <li>Meetings with clients</li>
             </ul>
         </Container>
         <Container>

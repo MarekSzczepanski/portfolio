@@ -45,7 +45,7 @@ const Bounce = (color) => keyframes`
 
 const translate1 = {x1: '1px', x2: '10px', x3: '40px', x4: '65px', x5: '90px', x6: '50px', x7: '40px', x8: '30px', x9: '1px', y1: '1px', y2: '10px', y3: '40px', y4: '60px', y5: '90px', y6: '70px', y7: '40px', y8: '15px', y9: '1px'};
 const translate2 = {x1: '1px', x2: '-3px', x3: '-10px', x4: '5px', x5: '15px', x6: '-35px', x7: '-40px', x8: '-35px', x9: '1px', y1: '1px', y2: '-5px', y3: '-20px', y4: '0px', y5: '10px', y6: '25px', y7: '40px', y8: '0px', y9: '1px'};
-const translate3 = {x1: '1px', x2: '-25px', x3: '-80px', x4: '-10px', x5: '5px', y1: '-15px', y2: '-40px', y3: '-10px', y4: '10px', y5: '-20px'};
+const translate3 = {x1: '1px', x2: '-25px', x3: '-80px', x4: '-10px', x5: '1px', x6: '-10px', x7: '-20px', x8: '-40px', x9: '1px', y1: '-15px', y2: '-40px', y3: '-10px', y4: '10px', y5: '-15px', y6: '-30px', y7: '5px', y8: '-5px', y9: '-15px'};
 
 const nameLetters = ['M', 'a', 'r', 'e', 'k', '', 'S', 'z', 'c', 'z', 'e', 'p', 'a', 'ń', 's', 'k', 'i',];
 const titleLetters = ['F', 'r', 'o', 'n', 't', 'e', 'n', 'd', '', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'];
