@@ -20,6 +20,9 @@ const SkillsContainer = styled.div`
   flex-wrap: wrap;
   height: 600px;
   font-size: 1vw;
+  @media (max-width: 1023px) {
+    position: static;
+  }
 `
 
 const Skills = () => (

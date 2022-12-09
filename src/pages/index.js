@@ -15,9 +15,15 @@ const Container = styled.div`
 `
 const SkillsH3 = styled.h3`
   width: 62%;
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
 `
 const ExperienceH3 = styled.h3`
   width: 38%;
+  @media (max-width: 1023px) {
+    margin-top: 550px;
+  }
 `
 
 const IndexPage = () => (
