@@ -44,7 +44,7 @@ const Move2 = (translate) => keyframes`
     100% { transform: translate(${translate.x9}, ${translate.y9}) rotate(360deg) scale(.9, .7);}
   }
 `
-const blackAndWhiteText = () => keyframes`
+const BlackAndWhiteText = () => keyframes`
   from {color: white}
   to {color: black}
 `
@@ -101,15 +101,15 @@ const Circle = styled.div`
   ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
   ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
   ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
+  cursor: ${props => props.colorChange ? 'pointer' : 'default'};
   z-index: ${props => props.zIndex ? props.zIndex : 0};
   &:hover {
     animation: 
-    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
-    ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
-    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
+    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, 
+    ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
+    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
     ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
-    ${props => props.colorChange ? blackAndWhiteText : null} .3s linear infinite alternate;
-    cursor: ${props => props.colorChange ? 'pointer' : null};
+    ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
   }
   @media (max-width: 1023px) {
     position: absolute;
@@ -128,10 +128,11 @@ const Circle = styled.div`
   }
 `
 const Text = styled.span`
-  animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
+  animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   @media (max-width: 1023px) {
     font-size: 13px;
+    animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   }
 `
 
