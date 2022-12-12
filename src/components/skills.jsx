@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Blob from '../components/blob'
 
-const translate = {x1: '0vw', x2: '7vw', x3: '20vw', x4: '30vw', x5: '40vw', x6: '30vw', x7: '20vw', x8: '7vw', x9: '0vw', y1: '200px', y2: '400px', y3: '450px', y4: '400px', y5: '200px', y6: '50px', y7: '0px', y8: '50px', y9: '200px'};
+const translate = {x1: '0vw', x2: '7vw', x3: '20vw', x4: '30vw', x5: '40vw', x6: '30vw', x7: '20vw', x8: '7vw', x9: '0vw', y1: '15vw', y2: '30vw', y3: '35vw', y4: '30vw', y5: '15vw', y6: '5vw', y7: '0vw', y8: '5vw', y9: '15vw'};
 const mTranslate = {x1: '-4vw', x2: '0vw', x3: '35vw', x4: '60vw', x5: '68vw', x6: '60vw', x7: '35vw', x8: '0vw', x9: '-4vw', y1: '200px', y2: '400px', y3: '450px', y4: '400px', y5: '200px', y6: '50px', y7: '0px', y8: '50px', y9: '200px'};
 const translate1 = {x1: '11vw', x2: '17vw', x3: '22vw', x4: '20vw', x5: '20vw', x6: '22vw', x7: '20vw', x8: '17vw', x9: '11vw', y1: '80px', y2: '130px', y3: '150px', y4: '130px', y5: '120px', y6: '110px', y7: '105px', y8: '100px', y9: '80px'};
 const translate2 = {x1: '11vw', x2: '9vw', x3: '9vw', x4: '11vw', x5: '11vw', x6: '10vw', x7: '11vw', x8: '10vw', x9: '11vw', y1: '200px', y2: '230px', y3: '250px', y4: '230px', y5: '220px', y6: '210px', y7: '205px', y8: '200px', y9: '200px'};
@@ -18,10 +18,11 @@ const SkillsContainer = styled.div`
   top: 5vw;
   left: 0;
   flex-wrap: wrap;
-  height: 600px;
+  height: 50vw;
   font-size: 1vw;
   @media (max-width: 1023px) {
     top: 60px;
+    height: 600px;
   }
 `
 
