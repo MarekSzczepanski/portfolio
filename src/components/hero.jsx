@@ -6,7 +6,7 @@ import Blob from "../components/blob";
 
 const H1 = styled.h1`
   position: relative;
-  margin: 50px 0 0;
+  margin: 7vw 0 0;
   padding: 0;
   font-family: 'Rubik Spray Paint';
   font-size: 6vw;
@@ -69,9 +69,9 @@ const Bounce = (color) => keyframes`
   100% { transform: scale(1, 1) }
 `
 
-const translate1 = {x1: '1px', x2: '10px', x3: '40px', x4: '65px', x5: '90px', x6: '50px', x7: '40px', x8: '30px', x9: '1px', y1: '1px', y2: '10px', y3: '40px', y4: '60px', y5: '90px', y6: '70px', y7: '40px', y8: '15px', y9: '1px'};
-const translate2 = {x1: '1px', x2: '-3px', x3: '-10px', x4: '5px', x5: '15px', x6: '-35px', x7: '-40px', x8: '-35px', x9: '1px', y1: '1px', y2: '-5px', y3: '-20px', y4: '0px', y5: '10px', y6: '25px', y7: '40px', y8: '0px', y9: '1px'};
-const translate3 = {x1: '1px', x2: '-25px', x3: '-80px', x4: '-10px', x5: '1px', x6: '-10px', x7: '-20px', x8: '-40px', x9: '1px', y1: '-15px', y2: '-40px', y3: '-10px', y4: '10px', y5: '-15px', y6: '-30px', y7: '5px', y8: '-5px', y9: '-15px'};
+const translate1 = {x1: '0vw', x2: '1vw', x3: '4vw', x4: '6.5vw', x5: '9vw', x6: '5vw', x7: '4vw', x8: '3vw', x9: '0vw', y1: '0vw', y2: '1vw', y3: '4vw', y4: '6vw', y5: '9vw', y6: '7vw', y7: '4vw', y8: '2vw', y9: '0vw'};
+const translate2 = {x1: '0vw', x2: '-.5vw', x3: '-1vw', x4: '-5vw', x5: '-2vw', x6: '-4vw', x7: '-5vw', x8: '-3vw', x9: '0vw', y1: '0vw', y2: '-1vw', y3: '-2vw', y4: '0vw', y5: '-1vw', y6: '=3vw', y7: '-4vw', y8: '0vw', y9: '0vw'};
+const translate3 = {x1: '0vw', x2: '-3vw', x3: '-8vw', x4: '-1vw', x5: '0vw', x6: '-1vw', x7: '-2vw', x8: '-4vw', x9: '0vw', y1: '-1.5vw', y2: '-4vw', y3: '-1vw', y4: '1vw', y5: '-1.5vw', y6: '-3vw', y7: '.5vw', y8: '-.5vw', y9: '-1.5vw'};
 const mTranslate1 = {x1: '72vw', x2: '76vw', x3: '75vw', x4: '76vw', x5: '72vw', x6: '73vw', x7: '76vw', x8: '74vw', x9: '72vw', y1: '30px', y2: '40px', y3: '60px', y4: '80px', y5: '103px', y6: '100px', y7: '80px', y8: '60px', y9: '30px'};
 const mTranslate3 = {x1: '1px', x2: '15px', x3: '10px', x4: '10px', x5: '1px', x6: '14px', x7: '20px', x8: '6px', x9: '1px', y1: '-10px', y2: '-34px', y3: '-44px', y4: '-36px', y5: '-25px', y6: '-10px', y7: '-15px', y8: '-25px', y9: '-10px'};
 const nameLetters = ['M', 'a', 'r', 'e', 'k', '', 'S', 'z', 'c', 'z', 'e', 'p', 'a', 'ń', 's', 'k', 'i',];
@@ -130,7 +130,7 @@ const Hero = () => {
         </H2>
         <About>I'm settled in Ostróda, Poland. I have 3 years of experience with Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited. </About>
       </div>
-      <Blob color="gray" measure="30vw" top="100px" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={'me.jpg'}></Blob>
+      <Blob color="gray" measure="30vw" top="6vw" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={'me.jpg'}></Blob>
       <Blob color="royalblue" measure="12vw" top="3vw" left="22vw" delay="-3" mMeasure="20vw" mTop="2vw" mLeft="5vw" translate={translate1} mTranslate={mTranslate1}></Blob>
       <Blob color="gold" measure="10vw" top="25vw" left="60vw" delay="-5" mMeasure="14vw" mLeft="45vw" translate={translate2} mTranslate={translate2}></Blob>
       <Blob color="crimson" measure="13vw" top="4vw" left="85vw" delay="-1" mMeasure="22vw" mTop="230px" mLeft="75vw" translate={translate3} mTranslate={mTranslate3}></Blob>
