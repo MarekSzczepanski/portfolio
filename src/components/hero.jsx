@@ -130,7 +130,7 @@ const Hero = () => {
         </H2>
         <About>I'm settled in Ostróda, Poland. I have 3 years of experience with Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited. </About>
       </div>
-      <Blob noMove={true} color="gray" measure="30vw" top="100px" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={true}></Blob>
+      <Blob color="gray" measure="30vw" top="100px" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={'me.jpg'}></Blob>
       <Blob color="royalblue" measure="12vw" top="3vw" left="22vw" delay="-3" mMeasure="20vw" mTop="2vw" mLeft="5vw" translate={translate1} mTranslate={mTranslate1}></Blob>
       <Blob color="gold" measure="10vw" top="25vw" left="60vw" delay="-5" mMeasure="14vw" mLeft="45vw" translate={translate2} mTranslate={translate2}></Blob>
       <Blob color="crimson" measure="13vw" top="4vw" left="85vw" delay="-1" mMeasure="22vw" mTop="230px" mLeft="75vw" translate={translate3} mTranslate={mTranslate3}></Blob>

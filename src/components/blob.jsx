@@ -136,23 +136,59 @@ const Text = styled.span`
   }
 `
 
-const ProfileImage = () => {
+const ProfileImage = (props) => {
   return (
     <Image
-      src="me.jpg"
-      alt="profile"
+      src={props.image}
+      className={props.customClass}
+      alt='profile'
       style={{
-        height: '100%',
+        height: '100%'
       }}
     />
   );
 };
 
-const Blob = ({ color, measure, top, left, delay, mMeasure, mTop, mLeft, translate, mTranslate, noMove, image, position, border, text, skill, zIndex, fontSize, colorChange }) => {
+const Blob = ({
+  measure,
+  mMeasure,
+  color,
+  fontSize,
+  position,
+  top,
+  left,
+  mTop,
+  mLeft,
+  translate,
+  mTranslate,
+  delay,
+  borderColor,
+  skill,
+  zIndex,
+  colorChange,
+  image,
+  customClass,
+  text,
+}) => {
   return ( 
     <Wrap>
-      <Circle measure={measure} color={color} top={top} left={left} delay={delay} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} translate={translate} mTranslate={mTranslate} noMove={noMove} position={position} border={border} skill={skill} zIndex={zIndex} colorChange={colorChange}>
-        {image ? <ProfileImage></ProfileImage> : null}
+      <Circle 
+      measure={measure}
+      mMeasure={mMeasure}
+      color={color}
+      position={position}
+      top={top}
+      left={left}
+      mTop={mTop}
+      mLeft={mLeft}
+      translate={translate}
+      mTranslate={mTranslate}
+      delay={delay}
+      border={borderColor}
+      skill={skill}
+      zIndex={zIndex}
+      colorChange={colorChange}>
+        {image ? <ProfileImage image={image} customClass={customClass}></ProfileImage> : null}
         {text ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
       </Circle>
     </Wrap>
