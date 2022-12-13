@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-top: 5vw;
+  margin-top: 2vw;
 `
 const SkillsH3 = styled.h3`
   width: 62%;
@@ -31,6 +31,12 @@ const ExperienceH3 = styled.h3`
 const ProjectsH3 = styled.h3`
   margin-top: 10vw;
 `
+const Wrap = styled.div`
+  position: absolute;
+  top: 83vw;
+  width: 50vw;
+}
+`
 
 const IndexPage = () => (
   <Layout>
@@ -42,11 +48,16 @@ const IndexPage = () => (
       <Experience></Experience>
     </Container>
     <ContactButton></ContactButton>
-    <ProjectsH3>Projects</ProjectsH3>
-    <Container>
-      <Project></Project>
-      <Project></Project>
-    </Container>
+    <Wrap>
+      <ProjectsH3>Projects</ProjectsH3>
+      <Container>
+        <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'}></Project>
+        <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
+      </Container>
+    </Wrap>
+    <footer>
+      <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Darius Dan - Flaticon</a>
+    </footer>
   </Layout>
 )
 
