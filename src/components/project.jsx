@@ -29,17 +29,28 @@ const Container = styled.div`
     color: ${props => props.fontColor ? props.fontColor : '#fff'};
     animation: ${morph} 30s linear ${props => props.delay} infinite alternate;
     cursor: pointer;
+    @media (max-width: 1023px) {
+        position: relative;
+        width: 88vw;
+        height: 88vw;
+        margin: 0 0 30px 1vw;
+    }
 `
 const H4 = styled.h4`
     margin-top: 1.1vw;
     font-size: 1.5vw;
     text-align: center;
+    @media (max-width: 1023px) {
+        max-width: 55vw;
+        margin-top: 55vw;
+        font-size: 6vw;
+    }
 `
 
 const Project = ({image, customClass, color, text, fontColor, innerBlobColor, delay}) => {
     return (
         <Container color={color} fontColor={fontColor} delay={delay}>
-            <Blob position='relative' measure='10vw' image={image} customClass={customClass} color={innerBlobColor}></Blob>
+            <Blob position='relative' measure='10vw' mMeasure='37vw' mTop='18vw' mLeft='26vw' image={image} customClass={customClass} color={innerBlobColor}></Blob>
             <H4>{text}</H4>
         </Container>
     )

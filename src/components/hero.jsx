@@ -17,7 +17,7 @@ const H1 = styled.h1`
   @media(max-width: 1023px) {
     font-size: 40px;
     line-height: 46px;
-    margin-top: 136px;
+    margin-top: 40vw;
   }
 `
 const H2 = styled.h2`

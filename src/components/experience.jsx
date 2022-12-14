@@ -6,11 +6,15 @@ const Wrap = styled.div`
     @media (max-width: 1023px) {
         width: 100%;
         margin-left: 0;
+        text-align: center;
     }
 `
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    @media (max-width: 1023px) {
+        display: inline-block;
+    }
 `
 const H5 = styled.h5`
     font-size: 1.5vw;
