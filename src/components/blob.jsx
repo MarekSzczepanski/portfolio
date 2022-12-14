@@ -122,6 +122,14 @@ const Circle = styled.div`
     ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
     ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
     ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+    &:hover {
+      animation: 
+      ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+      ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
+      ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
+      ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  }
+    }
   }
   > div {
     width: 100%;
@@ -131,7 +139,7 @@ const Text = styled.span`
   font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
   animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   @media (max-width: 1023px) {
-    font-size: 13px;
+    font-size: 4vw;
     animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   }
 `
