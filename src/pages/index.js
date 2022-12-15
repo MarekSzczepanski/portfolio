@@ -12,54 +12,50 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  margin-top: 2vw;
-`
-const SkillsH3 = styled.h3`
-  width: 62%;
+  margin-top: 4vw;
   @media (max-width: 1023px) {
-    width: 100%;
+    margin-top: 9.5vw;
   }
 `
-const ExperienceH3 = styled.h3`
-  width: 38%;
-  @media (max-width: 1023px) {
-    width: 100%;
-    margin-top: 520px;
-    margin-bottom: 8px;
-  }
-`
-const ProjectsH3 = styled.h3`
-  margin-top: 10vw;
+const ProjectsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `
 const Wrap = styled.div`
   @media (min-width: 1024px) {
-    position: absolute;
-    top: 83vw;
-    width: 50vw;
+    width: 49.8vw;
   }
 }
+`
+const Footer = styled.footer`
+  display: none;
+  @media (min-width: 1024px) {
+    position: absolute;
+    bottom: 0;
+  }
 `
 
 const IndexPage = () => (
   <Layout>
     <Hero></Hero>
     <Container>
-      <SkillsH3>My skills</SkillsH3>
-      <ExperienceH3>Experience</ExperienceH3>
       <Skills></Skills>
       <Experience></Experience>
     </Container>
     <ContactButton></ContactButton>
     <Wrap>
-      <ProjectsH3>Projects</ProjectsH3>
-      <Container>
+      <h3>projects</h3>
+      <ProjectsContainer>
         <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'} ></Project>
         <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
-      </Container>
+        <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'} ></Project>
+        <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
+      </ProjectsContainer>
     </Wrap>
-    <footer>
+    <Footer>
       <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Darius Dan - Flaticon</a>
-    </footer>
+    </Footer>
   </Layout>
 )
 
