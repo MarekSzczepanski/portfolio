@@ -19,10 +19,9 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 22.5vw;
-    height: 22.5vw;
+    width: 23.7vw;
+    height: 23.7vw;
     margin-top: 2vw;
-    margin-right: 2vw;
     padding: 4vw;
     border-radius: 50%;
     background-color: ${props => props.color};
@@ -33,12 +32,12 @@ const Container = styled.div`
         position: relative;
         width: 88vw;
         height: 88vw;
-        margin: 0 0 30px 1vw;
+        margin: 9.3vw 0 0 1vw;
     }
 `
 const H4 = styled.h4`
     margin-top: 1.1vw;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     text-align: center;
     @media (max-width: 1023px) {
         max-width: 55vw;
