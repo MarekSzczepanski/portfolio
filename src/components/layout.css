@@ -217,8 +217,7 @@ h5, h6 {
   margin: 0 0 4px 0;
 }
 ul {
-  margin-left: 0;
-  margin-bottom: 40px;
+  margin: 0;
 }
 .project1 img {
   top: -13.5% !important;
@@ -235,17 +234,22 @@ ul {
   cursor: pointer;
 }
 h3 {
-  font-size: 2vw;
+  margin: 0 0 1vw;
+  font-size: 2.5vw;
 }
 h4 {
   margin: 0;
 }
 @media (max-width: 1023px) {
   h3 {
-    font-size: 30px;
+    margin-top: 0;
+    font-size: 8vw;
     text-align: center;
   }
   h4 {
     font-size: 20px;
+  }
+  h5, h6 {
+    margin: 0 0 1.1vw 0;
   }
 }
