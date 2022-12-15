@@ -69,12 +69,12 @@ const ColorChange = () => keyframes`
   95% {background-color: #68A063; }
   100% {background-color: crimson; }
 `
-const RotateBack = () => keyframes`
+const RotateBack = (forceResizeRestart) => keyframes`
   0% { transform: rotate(360deg); }
   25% { transform: rotate(270deg); }
   50% { transform: rotate(180deg); }
   75% { transform: rotate(90deg); }
-  100% { transform: rotate(0deg); }
+  100% { transform: rotate(${forceResizeRestart}); }
 `
 const Wrap = styled.div`
   display: flex;
@@ -92,7 +92,7 @@ const Circle = styled.div`
   margin: ${props => props.margin};
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background: ${props => props.color ? props.color : '#F8F8ff'};
-  border: solid 3px ${props => props.border ? props.border : '#000'};
+  border: solid .23vw ${props => props.border ? props.border : '#000'};
   color: ${props => props.colorChange ? 'white' : 'black'};
   overflow: hidden;
   transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
@@ -103,13 +103,15 @@ const Circle = styled.div`
   ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
   cursor: ${props => props.colorChange ? 'pointer' : 'default'};
   z-index: ${props => props.zIndex ? props.zIndex : 0};
-  &:hover {
-    animation: 
-    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, 
-    ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
-    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
-    ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
-    ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
+  @media (min-width: 1024px) {
+    &:hover {
+      animation: 
+      ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, 
+      ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
+      ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
+      ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
+      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
+    }
   }
   @media (max-width: 1023px) {
     position: absolute;
@@ -117,18 +119,12 @@ const Circle = styled.div`
     left: ${props => props.mLeft};
     width: ${props => props.mMeasure};
     height: ${props => props.mMeasure};
+    border-width: 3px;
     animation: 
     ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
     ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
     ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
     ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
-    &:hover {
-      animation: 
-      ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
-      ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
-      ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
-      ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
-  }
     }
   }
   > div {
@@ -137,10 +133,10 @@ const Circle = styled.div`
 `
 const Text = styled.span`
   font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
-  animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  animation: ${RotateBack('0deg')} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   @media (max-width: 1023px) {
     font-size: 4vw;
-    animation: ${RotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
+    animation: ${RotateBack(0)} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   }
 `
 
