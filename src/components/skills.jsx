@@ -1,6 +1,6 @@
-import * as React from 'react'
-import styled from 'styled-components'
-import Blob from '../components/blob'
+import * as React from 'react';
+import styled from 'styled-components';
+import Blob from '../components/blob';
 
 const translate = {x1: '0vw', x2: '7vw', x3: '20vw', x4: '30vw', x5: '40.65vw', x6: '30vw', x7: '20vw', x8: '7vw', x9: '0vw', y1: '20vw', y2: '35vw', y3: '40vw', y4: '35vw', y5: '20vw', y6: '10vw', y7: '3vw', y8: '10vw', y9: '20vw'};
 const mTranslate = {x1: '-2vw', x2: '2vw', x3: '35vw', x4: '60vw', x5: '66vw', x6: '60vw', x7: '35vw', x8: '2vw', x9: '-2vw', y1: '50vw', y2: '90vw', y3: '100vw', y4: '90vw', y5: '50vw', y6: '20vw', y7: '10vw', y8: '20vw', y9: '50vw'};
@@ -12,11 +12,11 @@ const mTranslate2 = {x1: '15vw', x2: '18vw', x3: '19vw', x4: '17vw', x5: '16vw',
 const mTranslate3 = {x1: '33vw', x2: '37vw', x3: '33vw', x4: '35vw', x5: '31vw', x6: '37vw', x7: '35vw', x8: '37vw', x9: '33vw', y1: '72vw', y2: '69vw', y3: '71vw', y4: '72vw', y5: '68vw', y6: '70vw', y7: '71vw', y8: '71vw', y9: '72vw'};
 const skills = ['html', 'css', 'git', 'mysql', 'mongodb', 'express', 'cypress', 'jest', 'gatsby', 'gsap', 'percy', 'graphql', 'rest', 'ci / cd', 'npm', 'eslint', 'webpack'];
 const colors = ['#FF003F', 'gold', '#6787E7', '#74B72E', 'orange', 'plum', '#FF003F', 'gold', '#6787E7', '#74B72E', 'orange', 'plum', '#FF003F', 'gold', '#6787E7', '#74B72E', 'orange'];
-const mottoTops = ['12.1vw', '12.2vw', '32.6vw', '35.9vw'];
-const mottoLefts = ['-.2%', '39.9%', '47.2%', '-1.4%'];
-const mottoRotates = ['314', '38', '132', '240'];
+const mottoTops = ['12.35vw', '12.35vw', '32vw', '35.9vw'];
+const mottoLefts = ['-.2%', '39.9%', '47.2%', '-1.35%'];
+const mottoRotates = ['313', '36.7', '133.5', '240'];
 const mottoPartWords = ['self-', '-taught', 'and', 'proud'];
-const mottoColors = ['crimson', 'gold', '#6787E7', '#74B72E']
+const mottoColors = ['crimson', 'gold', '#6787E7', '#74B72E'];
 
 const Container = styled.div`
   width: 56%;
