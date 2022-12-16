@@ -97,7 +97,7 @@ const Circle = styled.div`
   overflow: hidden;
   transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
   animation: 
-  ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+  ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s,
   ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
   ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
   ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
@@ -106,7 +106,7 @@ const Circle = styled.div`
   @media (min-width: 1024px) {
     &:hover {
       animation: 
-      ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s, 
+      ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
       ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
@@ -121,7 +121,7 @@ const Circle = styled.div`
     height: ${props => props.mMeasure};
     border-width: 3px;
     animation: 
-    ${Morph} 10s linear infinite ${props => props.delay ? props.delay : 0}s,
+    ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s,
     ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
     ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
     ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
