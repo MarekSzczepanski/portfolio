@@ -9,7 +9,8 @@ const H1 = styled.h1`
   margin: 7vw 0 0;
   padding: 0;
   font-family: 'Rubik Spray Paint';
-  font-size: 6.55vw;
+  font-size: 6.75vw;
+  font-weight: 500;
   line-height: 6.55vw;
   letter-spacing: -0.01em;
   text-transform: capitalize;
@@ -23,8 +24,9 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   position: relative;
   margin: 0;
-  font-size: 3.6vw;
   font-family: 'Rubik Spray Paint';
+  font-size: 3.6vw;
+  font-weight: 500;
   z-index: 2;
   @media(max-width: 1023px) {
     font-size: 8.2vw;
