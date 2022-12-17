@@ -44,7 +44,7 @@ const Skills = () => (
   <Container>
     <h3>skills</h3>
     {mottoTops.map(function(object, i){
-      return <MottoPart top={mottoTops[i]} left={mottoLefts[i]} rotate={mottoRotates[i]} color={mottoColors[i]}>{mottoPartWords[i]}</MottoPart>
+      return <MottoPart key={i} top={mottoTops[i]} left={mottoLefts[i]} rotate={mottoRotates[i]} color={mottoColors[i]}>{mottoPartWords[i]}</MottoPart>
     })}
     {skills.map(function(object, i){
       return <Blob key={i} color={colors[i]} border={'black'} text={skills[i]} delay={i * 1.36} zIndex={i} skill={true} translate={translate} mTranslate={mTranslate} measure="9vw" mMeasure="25vw"/>;
