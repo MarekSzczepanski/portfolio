@@ -23,11 +23,18 @@ const Container = styled.div`
     height: 23.7vw;
     margin-top: 2vw;
     padding: 4vw;
+    border: solid .23vw transparent;
     border-radius: 50%;
     background-color: ${props => props.color};
     color: ${props => props.fontColor ? props.fontColor : '#fff'};
+    transition: border-color .2s ease-in;
     animation: ${morph} 30s linear ${props => props.delay} infinite alternate;
-    cursor: pointer;
+    @media (min-width: 1024px) {
+        cursor: pointer;
+        &:hover {
+            border-color: #000;
+        }
+    }
     @media (max-width: 1023px) {
         position: relative;
         width: 88vw;
@@ -49,7 +56,7 @@ const H4 = styled.h4`
 const Project = ({image, customClass, color, text, fontColor, innerBlobColor, delay}) => {
     return (
         <Container color={color} fontColor={fontColor} delay={delay}>
-            <Blob position='relative' measure='10vw' mMeasure='37vw' mTop='18vw' mLeft='26vw' image={image} customClass={customClass} color={innerBlobColor}></Blob>
+            <Blob position='relative' measure='10vw' mMeasure='37vw' mTop='18vw' mLeft='26vw' image={image} customClass={customClass} color={innerBlobColor} cursor='pointer'></Blob>
             <H4>{text}</H4>
         </Container>
     )
