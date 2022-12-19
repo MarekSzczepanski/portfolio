@@ -49,8 +49,6 @@ const IndexPage = () => (
       <ProjectsContainer>
         <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'} ></Project>
         <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
-        <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'} ></Project>
-        <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
       </ProjectsContainer>
     </Wrap>
     <Footer>

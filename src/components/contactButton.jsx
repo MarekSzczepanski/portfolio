@@ -49,12 +49,12 @@ const ContactButton = () => {
 
     return (
         <>
-            <Blob handleContactBlobClick={handleContactBlobClick} colorChange={true} border='black' text='Contact me' zIndex={3} fontSize='1.3vw' measure='11vw' mMeasure='35vw' translate={translate} mTranslate={mTranslate} cursor='pointer'/>
+            <Blob handleContactBlobClick={handleContactBlobClick} colorChange={true} border='black' text='Contact me' zIndex={3} fontSize='1.3vw' measure='11vw' mMeasure='35vw' translate={translate} mTranslate={mTranslate} cursor='pointer' rotateBack={true}/>
             <FormWrap display={String(isContactFormDisplayed)}>
                 <FormContainer>
                     <Form></Form>
                     <div onClick={handleContactBlobClick} onKeyDown={handleContactBlobClick} role='presentation'>
-                        <Blob handleContactBlobClick={handleContactBlobClick} text={'\u2718'} noRotateBack={true} measure='10vmin' mMeasure='10vmin' top='0' left='90%' color='royalblue' fontSize='5vmin' fontColor='orange' borderColor='transparent' cursor='pointer'/>
+                        <Blob handleContactBlobClick={handleContactBlobClick} text={'\u2718'} rotateBack={false} measure='10vmin' mMeasure='10vmin' top='0' left='90%' fontSize='5vmin' color='royalblue' fontColor='orange' hoverColor='orange' hoverFontColor='royalblue' borderColor='transparent' cursor='pointer'/>
                     </div>
                 </FormContainer>
             </FormWrap>

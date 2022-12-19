@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Image from '../components/Image'
+import Image from '../components/Image';
 
 const Morph = keyframes`
   0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
@@ -106,15 +106,15 @@ const Circle = styled.div`
   @media (min-width: 1024px) {
     &:hover {
       > span {
-        ${props => !props.colorChange ? 'color: royalblue' : null};
+        color: ${props => props.hoverFontColor ? props.hoverFontColor : null};
       }
-      ${props => props.noRotateBack ? 'background-color: orange' : null};
+      background-color: ${props => props.hoverColor ? props.hoverColor : null};
       animation: 
       ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
       ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
-      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
+      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate,
     }
   }
   @media (max-width: 1023px) {
@@ -148,17 +148,43 @@ const StaticText = styled.span`
   color: ${props => props.fontColor ? props.fontColor : '#000'}; 
   transition: color .2s ease-in;
 `
+const BlobImageContainer = styled.div`
+  height: 100%;
+  animation: ${props => props.rotate ? RotateBack('0deg') : props.rotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  @media (max-width: 1023px) {
+    animation: ${RotateBack(0)} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  }
+`
 
-const ProfileImage = (props) => {
+const ImageStatic = (props) => {
   return (
-    <Image
+    <BlobImageContainer>
+      <Image
       src={props.image}
       className={props.customClass}
       alt='profile'
       style={{
         height: '100%'
       }}
-    />
+      />
+    </BlobImageContainer>
+  );
+};
+
+const ImageRotateBack = (props) => {
+  return (
+    <BlobImageContainer rotate={true}>
+      <Image
+      src={props.image}
+      className={props.customClass}
+      alt='profile'
+      style={{
+        height: '100%',
+        transform: 'scale(1.2)',
+        filter: 'invert(.18)'
+      }}
+      />
+    </BlobImageContainer>
   );
 };
 
@@ -185,8 +211,10 @@ const Blob = ({
   customClass,
   text,
   handleContactBlobClick,
-  noRotateBack,
-  cursor
+  rotateBack,
+  cursor,
+  hoverColor,
+  hoverFontColor
 }) => {
   return ( 
     <Wrap onClick={handleContactBlobClick}>
@@ -207,11 +235,16 @@ const Blob = ({
       skill={skill}
       zIndex={zIndex}
       colorChange={colorChange}
-      noRotateBack={noRotateBack}
-      cursor={cursor}>
-        {image ? <ProfileImage image={image} customClass={customClass}></ProfileImage> : null}
-        {text && !noRotateBack ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
-        {text && noRotateBack ? <StaticText fontSize={fontSize} fontColor={fontColor}>{text}</StaticText> : null}
+      rotateBack={rotateBack}
+      cursor={cursor}
+      hoverColor={hoverColor}
+      hoverFontColor={hoverFontColor}
+      >
+        {image && rotateBack ? <ImageRotateBack image={image} customClass={customClass}></ImageRotateBack> : null}
+        {image && !rotateBack? <ImageStatic image={image} customClass={customClass}></ImageStatic> : null}
+        {text && rotateBack ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
+        {text && !rotateBack ? <StaticText fontSize={fontSize} fontColor={fontColor} hoverFontColor={hoverFontColor}>{text}</StaticText> : null}
+
       </Circle>
     </Wrap>
   )

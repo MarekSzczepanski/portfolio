@@ -76,32 +76,6 @@ const Experience = () => (
                 <Li>Creating an admin dashboard in React</Li>
             </ul>
         </Container>
-        <Container>
-        <H5>Frontend Developer</H5>
-        <H6>THINK IT CODE IT LIMITED | 08.2021 – present</H6>
-            <ul>
-                <Li>Developing e-commerce website (HTML + CSS + JS)</Li>
-                <Li>Developing Twitch e-commerce extension</Li>
-                <Li>Writing unit and e2e tests</Li>
-                <Li>Doing simple backend tasks</Li>
-                <Li>Creating and managing CI/CD pipeline</Li>
-                <Li>Managing SQL database</Li>
-                <Li>Creating an admin dashboard in React</Li>
-            </ul>
-        </Container>
-        <Container>
-        <H5>Frontend Developer</H5>
-        <H6>THINK IT CODE IT LIMITED | 08.2021 – present</H6>
-            <ul>
-                <Li>Developing e-commerce website (HTML + CSS + JS)</Li>
-                <Li>Developing Twitch e-commerce extension</Li>
-                <Li>Writing unit and e2e tests</Li>
-                <Li>Doing simple backend tasks</Li>
-                <Li>Creating and managing CI/CD pipeline</Li>
-                <Li>Managing SQL database</Li>
-                <Li>Creating an admin dashboard in React</Li>
-            </ul>
-        </Container>
     </Wrap>
 )
 
