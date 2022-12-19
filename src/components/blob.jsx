@@ -1,6 +1,5 @@
-import * as React from "react"
-import styled from "styled-components"
-import { keyframes } from "styled-components"
+import * as React from 'react';
+import styled, { keyframes } from 'styled-components';
 import Image from '../components/Image'
 
 const Morph = keyframes`
@@ -91,20 +90,25 @@ const Circle = styled.div`
   height: ${props => props.measure};
   margin: ${props => props.margin};
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background: ${props => props.color ? props.color : '#F8F8ff'};
+  background-color: ${props => props.color ? props.color : '#F8F8ff'};
   border: solid .23vw ${props => props.border ? props.border : '#000'};
   color: ${props => props.colorChange ? 'white' : 'black'};
   overflow: hidden;
   transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
+  transition: background-color .2s ease-in, color .2s ease-in;
   animation: 
   ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s,
   ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
   ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
   ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
-  cursor: ${props => props.colorChange ? 'pointer' : 'default'};
+  cursor: ${props => props.cursor ? props.cursor : 'default'};
   z-index: ${props => props.zIndex ? props.zIndex : 0};
   @media (min-width: 1024px) {
     &:hover {
+      > span {
+        ${props => !props.colorChange ? 'color: royalblue' : null};
+      }
+      ${props => props.noRotateBack ? 'background-color: orange' : null};
       animation: 
       ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
@@ -139,6 +143,11 @@ const Text = styled.span`
     animation: ${RotateBack(0)} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
   }
 `
+const StaticText = styled.span`
+  font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
+  color: ${props => props.fontColor ? props.fontColor : '#000'}; 
+  transition: color .2s ease-in;
+`
 
 const ProfileImage = (props) => {
   return (
@@ -158,6 +167,7 @@ const Blob = ({
   mMeasure,
   color,
   fontSize,
+  fontColor,
   position,
   top,
   left,
@@ -167,15 +177,19 @@ const Blob = ({
   mTranslate,
   delay,
   borderColor,
+  borderColorHover,
   skill,
   zIndex,
   colorChange,
   image,
   customClass,
   text,
+  handleContactBlobClick,
+  noRotateBack,
+  cursor
 }) => {
   return ( 
-    <Wrap>
+    <Wrap onClick={handleContactBlobClick}>
       <Circle 
       measure={measure}
       mMeasure={mMeasure}
@@ -189,11 +203,15 @@ const Blob = ({
       mTranslate={mTranslate}
       delay={delay}
       border={borderColor}
+      borderHover={borderColorHover}
       skill={skill}
       zIndex={zIndex}
-      colorChange={colorChange}>
+      colorChange={colorChange}
+      noRotateBack={noRotateBack}
+      cursor={cursor}>
         {image ? <ProfileImage image={image} customClass={customClass}></ProfileImage> : null}
-        {text ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
+        {text && !noRotateBack ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
+        {text && noRotateBack ? <StaticText fontSize={fontSize} fontColor={fontColor}>{text}</StaticText> : null}
       </Circle>
     </Wrap>
   )

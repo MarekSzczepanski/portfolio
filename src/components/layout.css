@@ -224,14 +224,12 @@ ul {
   left: -14% !important;
   width: 130% !important;
   height: 130% !important;
-  cursor: pointer;
 }
 .project2 img {
   top: 20% !important;
   left: 23% !important;
   width: 60% !important;
   height: 60% !important;
-  cursor: pointer;
 }
 h3 {
   margin: 0 0 1vw;
@@ -239,6 +237,12 @@ h3 {
 }
 h4 {
   margin: 0;
+}
+.display-none {
+  display: none;
+}
+.overflow-hidden {
+  overflow: hidden !important;
 }
 @media (max-width: 1023px) {
   h3 {

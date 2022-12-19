@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from "styled-components"
+import styled from 'styled-components';
 import Layout from '../components/layout';
 import Seo from '../components/seo';
 import Hero from '../components/hero';
@@ -39,11 +39,11 @@ const Footer = styled.footer`
 const IndexPage = () => (
   <Layout>
     <Hero></Hero>
+    <ContactButton></ContactButton>
     <Container>
       <Skills></Skills>
       <Experience></Experience>
     </Container>
-    <ContactButton></ContactButton>
     <Wrap>
       <h3>projects</h3>
       <ProjectsContainer>
