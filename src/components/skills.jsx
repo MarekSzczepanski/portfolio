@@ -47,11 +47,11 @@ const Skills = () => (
       return <MottoPart key={i} top={mottoTops[i]} left={mottoLefts[i]} rotate={mottoRotates[i]} color={mottoColors[i]}>{mottoPartWords[i]}</MottoPart>
     })}
     {skills.map(function(object, i){
-      return <Blob key={i} color={colors[i]} border={'black'} text={skills[i]} delay={i * 1.36} zIndex={i} skill={true} translate={translate} mTranslate={mTranslate} measure="9vw" mMeasure="25vw"/>;
+      return <Blob key={i} color={colors[i]} border={'black'} text={skills[i]} delay={i * 1.36} zIndex={i} skill={true} translate={translate} mTranslate={mTranslate} measure='9vw' mMeasure='25vw'/>;
     })}
-    <Blob color={'#f0DB4F'} border={'black'} text={'javascript'} skill={true} zIndex={21} fontSize={'1.5vw'} measure="16vw" mMeasure="38vw" translate={translate1} mTranslate={mTranslate1} />
-    <Blob color={'#61DBFB'} border={'black'} text={'react'} skill={true} zIndex={22} delay={.5} fontSize={'1.5vw'} measure="15vw" mMeasure="40vw" translate={translate2} mTranslate={mTranslate2} />
-    <Blob color={'#68A063'} border={'black'} text={'nodejs'} skill={true} zIndex={20} delay={1} fontSize={'1.5vw'} measure="14vw" mMeasure="37vw" translate={translate3} mTranslate={mTranslate3} />
+    <Blob color={'#f0DB4F'} border={'black'} text={'javascript'} skill={true} zIndex={21} fontSize={'1.5vw'} measure='16vw' mMeasure='38vw' translate={translate1} mTranslate={mTranslate1} />
+    <Blob color={'#61DBFB'} border={'black'} text={'react'} skill={true} zIndex={22} delay={.5} fontSize={'1.5vw'} measure='15vw' mMeasure='40vw' translate={translate2} mTranslate={mTranslate2} />
+    <Blob color={'#68A063'} border={'black'} text={'nodejs'} skill={true} zIndex={20} delay={1} fontSize={'1.5vw'} measure='14vw' mMeasure='37vw' translate={translate3} mTranslate={mTranslate3} />
   </Container>
 )
 

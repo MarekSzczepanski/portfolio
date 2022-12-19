@@ -1,10 +1,10 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+<p align='center'>
+  <a href='https://www.gatsbyjs.com'>
+    <img alt='Gatsby' src='https://www.gatsbyjs.com/Gatsby-Monogram.svg' width='60' />
   </a>
 </p>
-<h1 align="center">
+<h1 align='center'>
   Gatsby's default starter
 </h1>
 
@@ -44,7 +44,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+[<img src='https://www.gatsbyjs.com/deploynow.svg' alt='Deploy to Gatsby Cloud'>](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
 
 ## 🧐 What's inside?
 

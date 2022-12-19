@@ -54,7 +54,7 @@ const IndexPage = () => (
       </ProjectsContainer>
     </Wrap>
     <Footer>
-      <a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Darius Dan - Flaticon</a>
+      <a href='https://www.flaticon.com/free-icons/upload' title='upload icons'>Upload icons created by Darius Dan - Flaticon</a>
     </Footer>
   </Layout>
 )

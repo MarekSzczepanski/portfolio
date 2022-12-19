@@ -1,8 +1,8 @@
-import * as React from "react";
-import { useState, useEffect, useMemo } from "react";
-import styled from "styled-components";
-import { keyframes } from "styled-components";
-import Blob from "../components/blob";
+import * as React from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import styled from 'styled-components';
+import { keyframes } from 'styled-components';
+import Blob from '../components/blob';
 
 const H1 = styled.h1`
   position: relative;
@@ -133,10 +133,11 @@ const Hero = () => {
         </H2>
         <About>I'm settled in Ostróda, Poland. I have 3 years of experience with Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited.</About>
       </div>
-      <Blob color="gray" measure="33.5vw" top="5vw" left="60vw" mMeasure="48vw" mTop="10px" mLeft="49vw" image={'marek.jpg'}></Blob>
-      <Blob color="royalblue" measure="12vw" top="3vw" left="22vw" delay="-3" mMeasure="20vw" mTop="2vw" mLeft="5vw" translate={translate1} mTranslate={mTranslate1}></Blob>
-      <Blob color="gold" measure="10vw" top="25vw" left="60vw" delay="-5" mMeasure="14vw" mLeft="45vw" translate={translate2} mTranslate={translate2}></Blob>
-      <Blob color="crimson" measure="13vw" top="4vw" left="85vw" delay="-1" mMeasure="22vw" mTop="40vw" mLeft="75vw" translate={translate3} mTranslate={mTranslate3}></Blob>
+      <Blob color='gray' measure='33.5vw' top='5vw' left='60vw' mMeasure='48vw' mTop='10px' mLeft='49vw' image={'marek.jpg'}></Blob>
+      <Blob color='royalblue' measure='12vw' top='3vw' left='22vw' delay='-3' mMeasure='20vw' mTop='2vw' mLeft='5vw' translate={translate1} mTranslate={mTranslate1}></Blob>
+      <Blob color='gold' measure='10vw' top='25vw' left='60vw' delay='-5' mMeasure='14vw' mLeft='45vw' translate={translate2} mTranslate={translate2}></Blob>
+      <Blob color='crimson' measure='13vw' top='4vw' left='85vw' delay='-1' mMeasure='22vw' mTop='40vw' mLeft='75vw' translate={translate3} mTranslate={mTranslate3}></Blob>
+      <Blob measure='10vw' top='1vw' left='55vw' delay='-1' mMeasure='22vw' mTop='40vw' mLeft='75vw' translate={translate3} mTranslate={mTranslate3} image={'github.png'}></Blob>
     </>
   )
 }
