@@ -114,7 +114,7 @@ const Circle = styled.div`
       ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
       ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
       ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
-      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate,
+      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
     }
   }
   @media (max-width: 1023px) {

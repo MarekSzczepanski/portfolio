@@ -47,12 +47,14 @@ const IndexPage = () => (
     <Wrap>
       <h3>projects</h3>
       <ProjectsContainer>
-        <Project color={'royalblue'} image={'btc.png'} customClass={'project1'} text={'Crypto Portfolio'} delay={'-1s'} ></Project>
-        <Project color={'gold'} fontColor={'#333'} image={'uploader.png'} customClass={'project2'} text={'Video Uploader'} delay={'-15s'}></Project>
+        <Project color='royalblue' image='btc.png' customClass='project1' text='Crypto Portfolio' delay='-1s' ></Project>
+        <Project color='gold' fontColor='#333' innerBlobColor='#eee' image='uploader.png' customClass='project2' text='Video Uploader' delay='-15s'></Project>
+        <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s' ></Project>
       </ProjectsContainer>
     </Wrap>
     <Footer>
       <a href='https://www.flaticon.com/free-icons/upload' title='upload icons'>Upload icons created by Darius Dan - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by Smashicons - Flaticon</a>
     </Footer>
   </Layout>
 )
