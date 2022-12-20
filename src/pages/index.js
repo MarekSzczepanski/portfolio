@@ -90,7 +90,7 @@ const TreeImage = (props) => {
 const PathImage = () => {
   return (
     <Image
-    src={'g.png'}
+    src={'path.png'}
     alt='path'
     style={{
       width: '70vw',
