@@ -46,17 +46,19 @@ body {
 }
 a {
   background-color: transparent;
-  color: var(--color-primary);
+  color: 'royalblue';
   text-decoration: none;
   font-weight: 500;
-  text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
+}
+a:visited {
+  color: royalblue;
 }
 a:active,
 a:hover {
   outline-width: 0;
-  text-decoration: none;
+  text-decoration: underline;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
