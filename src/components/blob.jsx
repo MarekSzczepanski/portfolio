@@ -152,7 +152,7 @@ const BlobImageContainer = styled.div`
   height: 100%;
   animation: ${props => props.rotate ? RotateBack('0deg') : props.rotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   @media (max-width: 1023px) {
-    animation: ${RotateBack(0)} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+    animation: ${props => props.rotate ? RotateBack(0) : props.rotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
   }
 `
 
@@ -241,10 +241,9 @@ const Blob = ({
       hoverFontColor={hoverFontColor}
       >
         {image && rotateBack ? <ImageRotateBack image={image} customClass={customClass}></ImageRotateBack> : null}
-        {image && !rotateBack? <ImageStatic image={image} customClass={customClass}></ImageStatic> : null}
+        {image && !rotateBack ? <ImageStatic image={image} customClass={customClass}></ImageStatic> : null}
         {text && rotateBack ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
         {text && !rotateBack ? <StaticText fontSize={fontSize} fontColor={fontColor} hoverFontColor={hoverFontColor}>{text}</StaticText> : null}
-
       </Circle>
     </Wrap>
   )
