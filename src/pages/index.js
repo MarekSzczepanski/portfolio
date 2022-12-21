@@ -27,7 +27,6 @@ const Wrap = styled.div`
   @media (min-width: 1024px) {
     width: 49.8vw;
   }
-}
 `
 
 const IndexPage = () => (
@@ -41,9 +40,9 @@ const IndexPage = () => (
     <Wrap>
       <h3>projects</h3>
       <ProjectsContainer>
-        <Project color='royalblue' image='btc.png' customClass='project1' text='Crypto Portfolio' delay='-1s' ></Project>
+        <Project color='royalblue' image='btc.png' customClass='project1' text='Crypto Portfolio' delay='-1s'></Project>
         <Project color='gold' fontColor='#333' innerBlobColor='#eee' image='uploader.png' customClass='project2' text='Video Uploader' delay='-15s'></Project>
-        <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s' ></Project>
+        <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s'></Project>
       </ProjectsContainer>
     </Wrap>
     <Footer></Footer>

@@ -10,7 +10,6 @@ const WizardAnimation = () => keyframes`
 `
 
 const FooterContainer = styled.footer`
-  @media (min-width: 1024px) {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -18,12 +17,27 @@ const FooterContainer = styled.footer`
     margin: 4vw 0 0 -5vw;
     padding: 1vw 5vw;
     background-color: orange;
-  }
+    > a {
+      font-size: 1vw;
+    }
+    @media (max-width: 1023px) {
+      margin-top: 9.5vw;
+      padding: 5vw;
+      > a {
+        max-width: 90vw;
+        font-size: 3vw;
+        text-align: center;
+      }
+    }
 `
 const TreesSection = styled.div`
-  position: absolute;
-  top: -32.35vw;
-  left: 44%;
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    position: absolute;
+    top: -32.35vw;
+    left: 44%;
+  }
 `
 const TreesSectionContainer = styled.div`
   transform: scale(-.7, .7);
