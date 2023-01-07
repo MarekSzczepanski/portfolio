@@ -24,6 +24,10 @@
   --size-content: 54rem;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
+  /* Hide Scrollbar */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -43,6 +47,14 @@ body {
   word-wrap: break-word;
   background-color: #F8F8ff;
   font-family: 'Bungee';
+  /* Hide Scrollbar */
+  position: relative;
+  box-sizing: content-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding-right: 17px;
 }
 a {
   background-color: transparent;
