@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           padding: `5vw 5vw 0`,
+          boxSizing: 'border-box'
         }}
       >
         <main>{children}</main>
