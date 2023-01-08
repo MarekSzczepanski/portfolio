@@ -7,6 +7,7 @@ import ContactButton from '../components/contactButton';
 import Skills from '../components/skills';
 import Experience from '../components/experience';
 import Project from '../components/project';
+import ThingsILike from '../components/thingsILike';
 import Footer from '../components/footer';
 
 const Container = styled.div`
@@ -45,6 +46,7 @@ const IndexPage = () => (
         <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s'></Project>
       </ProjectsContainer>
     </Wrap>
+    <ThingsILike></ThingsILike>
     <Footer></Footer>
   </Layout>
 )

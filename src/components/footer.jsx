@@ -1,13 +1,8 @@
 import * as React from 'react';
+import { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Image from '../components/Image';
 import Blob from '../components/blob';
-
-const WizardAnimation = () => keyframes`
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(10deg); }
-  70% { transform: rotate(-15deg); }
-`
 
 const FooterContainer = styled.footer`
     position: relative;
@@ -30,78 +25,6 @@ const FooterContainer = styled.footer`
       }
     }
 `
-const TreesSection = styled.div`
-  display: none;
-  @media (min-width: 1024px) {
-    display: block;
-    position: absolute;
-    top: -32.35vw;
-    left: 44%;
-  }
-`
-const TreesSectionContainer = styled.div`
-  transform: scale(-.7, .7);
-`
-const TreeContainer = styled.div`
-  position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
-  transform: scale(-1, 1);
-  z-index: ${props => props.zIndex};
-`
-const WizardContainer = styled.div`
-  position: absolute;
-  top: 71%;
-  left: 37%;
-  width: 10vw;
-  transform: scale(-1, 1);
-  z-index: 24;
-  &:hover {
-    > div {
-      animation: ${WizardAnimation()} .5s ease-in;
-    }
-  }
-`
-
-const TreeImage = (props) => {
-  return (
-    <Image
-    src={props.image}
-    alt='tree'
-    style={{
-      width: `${props.width}`,
-      height: 'auto',
-    }}
-    />
-  );
-};
-const PathImage = () => {
-  return (
-    <Image
-    src={'path.png'}
-    alt='path'
-    style={{
-      width: '70vw',
-      height: 'auto',
-      margin: '0 auto'
-    }}
-    />
-  );
-}
-const WizardImage = () => {
-  return (
-    <WizardContainer>
-      <Image
-      src={'wizard.png'}
-      alt='wizard'
-      style={{
-        width: '100%',
-        height: 'auto'
-      }}
-    />
-    </WizardContainer>
-  );
-}
 
 const credits = [
     {
@@ -123,92 +46,67 @@ const credits = [
         link: 'https://www.flaticon.com/free-icons/wizard',
         title: 'wizard icons',
         text: 'Wizard icons created by Flat Icons - Flaticon'
+    },
+    {
+        link: 'https://www.flaticon.com/free-icons/right-chevron',
+        title: 'right chevron icons',
+        text: 'Right chevron icons created by Designkuu - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/blockchain',
+      title: 'blockchain icons',
+      text: 'Blockchain icons created by Freepik - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/decentralized',
+      title: 'decentralized icons',
+      text: 'Decentralized icons created by Good Ware - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/security',
+      title: 'security icons',
+      text: 'Security icons created by Kiranshastry - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/transparency',
+      title: 'transparency icons',
+      text: 'Transparency icons created by Freepik - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/cryptocurrency',
+      title: 'cryptocurrency icons',
+      text: 'Cryptocurrency icons created by kosonicon - Flaticon'
+    },
+    {
+      link: 'https://www.flaticon.com/free-icons/cryptocurrency',
+      title: 'nft icons',
+      text: 'Nft icons created by kosonicon - Flaticon'
     }
+
+    /*
+    <a href="https://www.flaticon.com/free-icons/electric-guitar" title="electric guitar icons">Electric guitar icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/unicorn" title="unicorn icons">Unicorn icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/drum-kit" title="drum kit icons">Drum kit icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/knight" title="knight icons">Knight icons created by Nikita Golubev - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/people" title="people icons">People icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/fire" title="fire icons">Fire icons created by iconixar - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/guitar" title="guitar icons">Guitar icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/dragon" title="dragon icons">Dragon icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
+    
+    
+    
+    */
 ];
 
-const treeContainers = [
-    {
-        top: '20vw',
-        left: '4vw',
-        zIndex: '25',
-        treeWidth: '20vw'
-    },
-    {
-        top: '14.5vw',
-        left: '20vw',
-        zIndex: '23',
-        treeWidth: '17vw'
-    },
-    {
-        top: '10vw',
-        left: '37vw',
-        zIndex: '21',
-        treeWidth: '13vw'
-    },
-    {
-        top: '4vw',
-        left: '47vw',
-        zIndex: '19',
-        treeWidth: '10vw'
-    },
-    {
-        top: '-2vw',
-        left: '50vw',
-        zIndex: '18',
-        treeWidth: '7.5vw'
-    },
-    {
-        top: '20.3vw',
-        left: '34vw',
-        zIndex: '25',
-        treeWidth: '18vw'
-    },
-    {
-        top: '14vw',
-        left: '47vw',
-        zIndex: '24',
-        treeWidth: '15vw'
-    },
-    {
-        top: '7vw',
-        left: '55.5vw',
-        zIndex: '23',
-        treeWidth: '11vw'
-    },
-    {
-        top: '0vw',
-        left: '57vw',
-        zIndex: '22',
-        treeWidth: '9vw'
-    },
-    {
-        top: '-3.5vw',
-        left: '55.5vw',
-        zIndex: '17',
-        treeWidth: '6.5vw'
-    },
-];
-
-const Footer = () => (
+const Footer = () => {
+  return (
     <FooterContainer>
-        {credits.map((credit, i) => {
-            return <a href={credits[i].link} title={credits[i].title}>{credits[i].text}</a>
-        })}
-        <TreesSection>
-            <TreesSectionContainer>
-                <PathImage></PathImage>
-                <WizardImage></WizardImage>
-                {treeContainers.map((container, i) => {
-                    return <TreeContainer top={treeContainers[i].top} left={treeContainers[i].left} zIndex={treeContainers[i].zIndex}>
-                        <TreeImage image={'tree.png'} width={treeContainers[i].treeWidth}></TreeImage>
-                        <Blob color='forestgreen' top='-3%' left='15%' measure='53%' position='absolute' delay='-8'></Blob>
-                        <Blob color='forestgreen' top='13%' left='35%' measure='58%' position='absolute'></Blob>
-                        <Blob color='#74B72E' top='27%' left='9%' measure='43%' position='absolute' delay='-2'></Blob>
-                    </TreeContainer>
-                })}
-            </TreesSectionContainer>
-        </TreesSection>
+      {credits.map((credit, i) => {
+        return <a href={credits[i].link} title={credits[i].title}>{credits[i].text}</a>
+      })}
     </FooterContainer>
-)
+  )
+}
 
 export default Footer

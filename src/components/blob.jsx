@@ -173,7 +173,7 @@ const ImageStatic = (props) => {
 
 const ImageRotateBack = (props) => {
   return (
-    <BlobImageContainer rotate={true}>
+    <BlobImageContainer rotate={'true'}>
       <Image
       src={props.image}
       className={props.customClass}
