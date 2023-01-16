@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
-import Image from '../components/Image';
-import Blob from '../components/blob';
+import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
     position: relative;
@@ -93,8 +90,13 @@ const credits = [
     <a href="https://www.flaticon.com/free-icons/guitar" title="guitar icons">Guitar icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/dragon" title="dragon icons">Dragon icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
-    
-    
+    <a href="https://www.flaticon.com/free-icons/music" title="music icons">Music icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/hammer" title="hammer icons">Hammer icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by Iconic Panda - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/thunder" title="thunder icons">Thunder icons created by Vectors Market - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/castle-tower" title="castle tower icons">Castle tower icons created by Hamstring - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/white-hair" title="white hair icons">White hair icons created by Freepik - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/dwarf" title="dwarf icons">Dwarf icons created by Flat Icons - Flaticon</a>
     
     */
 ];
@@ -103,7 +105,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       {credits.map((credit, i) => {
-        return <a href={credits[i].link} title={credits[i].title}>{credits[i].text}</a>
+        return <a href={credits[i].link} title={credits[i].title} key={i}>{credits[i].text}</a>
       })}
     </FooterContainer>
   )

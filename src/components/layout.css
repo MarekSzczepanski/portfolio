@@ -277,3 +277,15 @@ h4 {
     margin: 0 0 1.1vw 0;
   }
 }
+@keyframes guitarSecondAnimation {
+  0%, 20%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100% { transform: skewY(0); }
+  42.5%, 47.5%, 52.5%, 57.5%, 62.5%, 67.5%, 72.5%, 77.5%, 82.5%, 87.5%, 92.5%, 97.5% { transform: skewY(-40deg); }
+  2%, 6%, 10%, 14%, 18% { transform: skewX(40deg); }
+  4%, 8%, 12%, 16% { transform: skewX(0); } 
+}
+@keyframes bassSecondAnimation {
+  0%, 20%, 45%, 50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%, 100% { transform: skewY(0); }
+  42.5%, 47.5%, 52.5%, 57.5%, 62.5%, 67.5%, 72.5%, 77.5%, 82.5%, 87.5%, 92.5%, 97.5% { transform: skewY(40deg); }
+  2%, 6%, 10%, 14%, 18% { transform: skewX(-40deg); }
+  4%, 8%, 12%, 16% { transform: skewX(0); } 
+}
