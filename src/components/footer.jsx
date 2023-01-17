@@ -98,6 +98,12 @@ const credits = [
     <a href="https://www.flaticon.com/free-icons/white-hair" title="white hair icons">White hair icons created by Freepik - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/dwarf" title="dwarf icons">Dwarf icons created by Flat Icons - Flaticon</a>
     
+
+    <a href="https://www.flaticon.com/free-icons/architecture" title="architecture icons">Architecture icons created by Vectors Tank - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/teamwork" title="teamwork icons">Teamwork icons created by Becris - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/big-data" title="big data icons">Big data icons created by Freepik - Flaticon</a>
+
+    <a href="https://www.flaticon.com/free-icons/neural-network" title="neural network icons">Neural network icons created by Paul J. - Flaticon</a>
     */
 ];
 

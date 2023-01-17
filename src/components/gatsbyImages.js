@@ -75,7 +75,7 @@ export const TreeImage = (props) => {
     )
 }
 
-export  const PathImage = () => {
+export const PathImage = () => {
     return (
         <Image
         src={'path.png'}
@@ -169,12 +169,26 @@ export const treeContainers = [
 
 /* Things I like - Web3 */
 
-const Web3Item = styled.div`
+export const BinaryTextAnimation = keyframes`
+    0%, 100% { 
+        opacity: 0;
+        transform: translateY(0);
+    }
+    70% { opacity: 0; }
+    80%, 95% { opacity: 1; }
+    99% {
+        opacity: 0;
+        transform: translateY(68vw);
+    }
+`
+
+export const Web3Item = styled.div`
     position: relative;
     grid-area: ${props => props.area};
     height: 6.5vw;
     margin: 0 auto;
 `
+
 const H5 = styled.h5`
     position: relative;
     height: 2vw;
@@ -298,6 +312,49 @@ export const NftImage = () => {
     )
 }
 
+export const NetworkImage = (props) => {
+    return (
+        <Image 
+        src={'neural-network.png'} 
+        alt='neural-network'
+        style={{
+            position: 'absolute',
+            top: `${props.top}`,
+            left: `${props.left}`,
+            width: '14vw',
+            zIndex: '-1'
+        }}
+        />
+    )
+}
+
+export const networkImages = [
+    {
+        top: '16vw',
+        left: '84.5vw'
+    },
+    {
+        top: '24.75vw',
+        left: '84.5vw'
+    },
+    {
+        top: '24.75vw',
+        left: '77.5vw'
+    },
+    {
+        top: '20.4vw',
+        left: '70.45vw'
+    },
+    {
+        top: '24.75vw',
+        left: '63.5vw'
+    },
+    {
+        top: '16vw',
+        left: '77.5vw'
+    }
+]
+
 /* Things I like - Power Metal */
 
 export const transformFromTo = (start, end) => keyframes`
@@ -305,13 +362,13 @@ export const transformFromTo = (start, end) => keyframes`
     50% { transform: ${end} }
 `
 
-export const weapon = (translateX0, translateX1, translateX2, translateY1, translateY2, rotate1, rotate2, rotate3) => keyframes`
+const weapon = (translateX0, translateX1, translateX2, translateY1, translateY2, rotate1, rotate2, rotate3) => keyframes`
     0%, 90%, 100% { transform: translate(${translateX0}, 0) rotate(${rotate1}); }
     40%, 60% { transform: translate(${translateX1}, ${translateY1}) rotate(${rotate2}); }
     50% { transform: translate(${translateX2}, ${translateY2}) rotate(${rotate3}); }
 `
 
-export const helmet = () => keyframes`
+const helmet = () => keyframes`
     0%, .5%, 16.5%, 52%, 68%, 100% { transform: translateY(0); }
     2.5% { transform: translateY(4vw) rotate(80deg); }
     54% { transform: translateY(4vw) rotate(-80deg); }

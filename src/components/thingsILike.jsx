@@ -24,7 +24,10 @@ import {
     LightImage,
     lightningImages,
     thunder,
-    LightningImage
+    LightningImage,
+    BinaryTextAnimation,
+    NetworkImage,
+    networkImages
 } from './gatsbyImages'
 
 const Container = styled.div`
@@ -106,7 +109,24 @@ const SkewedBlobContainer = styled.div`
     transform: skew(-68deg, 51deg);
 `
 
-const slides = 2;
+const VerticalTextContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: ${props => props.top};
+    left: ${props => props.left};
+`
+const verticalTextLetters = ['0', '1', '1', '0', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '0', '1', '1', '1', '0', '1'];
+const VerticalText = styled.div`
+    position: absolute;
+    top: 0;
+    height: 1.3vw;
+    font-size: 1.3vw;
+    animation: ${BinaryTextAnimation} 6s linear infinite ${props => props.delay}s;
+`
+
+const slides = 3;
 const ThingsILike = () => {
     const [activeSlide, setActiveSlide] = useState(1);
     const [sliderTransformValue, setSliderTransformValue] = useState(0);
@@ -142,6 +162,25 @@ const ThingsILike = () => {
                         <TransparencyImage></TransparencyImage>
                         <CryptocurrenciesImage></CryptocurrenciesImage>
                         <NftImage></NftImage>
+                        <VerticalTextContainer top='-30vw' left='13vw'>
+                            {verticalTextLetters.map((letter, i) => {
+                                return <VerticalText delay={i * 0.1}>{letter}</VerticalText>
+                            })}
+                        </VerticalTextContainer>
+                        <VerticalTextContainer top='-40vw' left='36vw'>
+                            {verticalTextLetters.map((letter, i) => {
+                                return <VerticalText delay={i * 0.1 - 2}>{letter}</VerticalText>
+                            })}
+                        </VerticalTextContainer>
+                        <VerticalTextContainer top='-47vw' left='57vw'>
+                            {verticalTextLetters.map((letter, i) => {
+                                return <VerticalText delay={i * 0.1 - 1}>{letter}</VerticalText>
+                            })}
+                        </VerticalTextContainer>
+                        
+                        {networkImages.map(image => {
+                            return <NetworkImage top={image.top} left={image.left}></NetworkImage>
+                        })}
                     </Web3Container>
                 </Slide>
                 <Slide>
