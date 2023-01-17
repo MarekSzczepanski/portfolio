@@ -140,25 +140,24 @@ const ThingsILike = () => {
     const [activeSlide, setActiveSlide] = useState(1);
     const [sliderTransformValue, setSliderTransformValue] = useState(0);
 
-    const handleClick = (e) => {
+    const handleClick = (e, isForward) => {
         e.preventDefault();
-        if (e.currentTarget.dataset.chevron === 'right' && activeSlide < slides) {
+        if (isForward && activeSlide < slides) {
             setActiveSlide(activeSlide + 1);
-            setSliderTransformValue(sliderTransformValue + activeSlide * -100);
-
-        } else if (e.currentTarget.dataset.chevron === 'left' && activeSlide > 1) {
+            setSliderTransformValue(sliderTransformValue - 100);
+        } else if (activeSlide > 1) {
             setActiveSlide(activeSlide - 1);
-            setSliderTransformValue(sliderTransformValue + (activeSlide - 1) * 100);
+            setSliderTransformValue(sliderTransformValue + 100);
         }
     }
 
     return (
         <Container>
             <H3>Things I like</H3>
-            <div data-chevron='left' onClick={handleClick} role='presentation'>
+            <div onClick={(e) => handleClick(e)} role='presentation'>
                 <ChevronLeft active={activeSlide > 1}></ChevronLeft>
             </div>
-            <div data-chevron='right' onClick={handleClick} role='presentation'>
+            <div onClick={(e) => handleClick(e, true)} role='presentation'>
                 <ChevronRight active={activeSlide < slides}></ChevronRight>
             </div>
             <SliderContainer translate={sliderTransformValue}>
