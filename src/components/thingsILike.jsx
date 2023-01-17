@@ -88,6 +88,15 @@ const PowerMetalContainer = styled.div`
     grid-row-gap: 3vw;
     position: relative;
     margin-top: 4vw;
+    ::before {
+        content: '';
+        position: absolute;
+        top: 11vw;
+        left: -5vw;
+        width: 3vw;
+        height: 19vw;
+        background-color: #f8f8ff;
+    }
 `
 const AnimationWrap = styled.div`
     position: ${props => props.position ? props.position : null};
