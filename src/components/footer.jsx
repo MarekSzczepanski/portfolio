@@ -20,9 +20,10 @@ const FooterContainer = styled.footer`
       flex-direction: column;
       margin-top: 9.5vw;
       padding: 5vw;
-      > a {
-        max-width: 90vw;
-        font-size: 3vw;
+      > a, h4 {
+        width: 90vw;
+        margin-top: 20px;
+        font-size: 2.5vw;
         text-align: center;
       }
     }
