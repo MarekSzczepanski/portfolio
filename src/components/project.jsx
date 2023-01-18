@@ -39,7 +39,7 @@ const Container = styled.div`
         position: relative;
         width: 88vw;
         height: 88vw;
-        margin: 9.3vw 0 0 1vw;
+        margin: 3.3vw 0 0 1vw;
     }
 `
 const H4 = styled.h4`

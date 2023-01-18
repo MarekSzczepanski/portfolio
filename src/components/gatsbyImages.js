@@ -477,6 +477,23 @@ export const BlockchainImage = () => {
         </Web3Item>
     )
 }
+export const BlockchainImageMobile = () => {
+    return (
+        <>
+            <Image
+            src={'blockchain.png'}
+            alt='Blockchain'
+            style={{
+                width: '40vw',
+                height: 'auto',
+                margin: '13vw auto 20vw',
+                zIndex: '2'
+            }}
+            />
+            <Blob color='plum' measure='60vw' top ='15vw' left='15vw' margin='0 auto'></Blob>
+        </>
+    )
+}
 
 export const DecentralizationImage = () => {
     return (
@@ -592,27 +609,27 @@ export const NetworkImage = (props) => {
 export const networkImages = [
     {
         top: '16vw',
-        left: '84.5vw'
+        left: '184.5vw'
     },
     {
         top: '24.75vw',
-        left: '84.5vw'
+        left: '184.5vw'
     },
     {
         top: '24.75vw',
-        left: '77.5vw'
+        left: '177.5vw'
     },
     {
         top: '20.4vw',
-        left: '70.45vw'
+        left: '170.45vw'
     },
     {
         top: '24.75vw',
-        left: '63.5vw'
+        left: '163.5vw'
     },
     {
         top: '16vw',
-        left: '77.5vw'
+        left: '177.5vw'
     }
 ]
 
@@ -655,6 +672,21 @@ export const GuitarImage = () => {
         class='guitar'
         style={{
             animation: 'guitarSecondAnimation 3s ease-out 1.5s infinite'
+        }}
+        />
+    )
+}
+
+export const GuitarImageMobile = () => {
+    return (
+        <Image
+        src={'guitar.png'}
+        alt='guitar'
+        class='guitar'
+        style={{
+            width: '50vw',
+            margin: '20vw 0 20vw 20vw',
+            animation: 'guitarSecondAnimation 4s ease-out 1.5s infinite'
         }}
         />
     )
@@ -943,34 +975,44 @@ export const noteImages = [
         rotate1: '-20deg',
         rotate2: '-15deg',
         delay: '0s',
+        mTop: '102vw',
+        mLeft: '24vw'
     },
     {
         top: '1vw',
         left: '60vw',
         rotate1: '25deg',
         rotate2: '20deg',
-        delay: '-2s'
+        delay: '-2s',
+        mTop: '118vw',
+        mLeft: '77vw'
     },
     {
         top: '8vw',
         left: '50vw',
         rotate1: '10deg',
         rotate2: '15deg',
-        delay: '-1s'
+        delay: '-1s',
+        mTop: '130vw',
+        mLeft: '12vw'
     },
     {
         top: '11vw',
         left: '37vw',
         rotate1: '-12deg',
         rotate2: '-17deg',
-        delay: '-1.5s'
+        delay: '-1.5s',
+        mTop: '143vw',
+        mLeft: '79vw'
     },
     {
         top: '-3vw',
         left: '45vw',
         rotate1: '-7deg',
         rotate2: '-2deg',
-        delay: '-.5s'
+        delay: '-.5s',
+        mTop: '168vw',
+        mLeft: '34vw'
     }
 ]
 
