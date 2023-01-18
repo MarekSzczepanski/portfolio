@@ -7,7 +7,6 @@ import {
     ChevronRight,
     TreeImage,
     PathImage,
-    WizardImage,
     treeContainers,
     BlockchainImage,
     DecentralizationImage,
@@ -27,7 +26,12 @@ import {
     LightningImage,
     BinaryTextAnimation,
     NetworkImage,
-    networkImages
+    networkImages,
+    DeerImage,
+    DeerFemaleImage,
+    DeerBabyImage,
+    CabinImage,
+    WalkImage
 } from './gatsbyImages'
 
 const Container = styled.div`
@@ -60,8 +64,8 @@ const TreesSection = styled.div`
   @media (min-width: 1024px) {
     display: block;
     position: absolute;
-    top: 4.75vw;
-    left: 44%;
+    top: 4vw;
+    left: 15%;
   }
 `
 const TreesSectionContainer = styled.div`
@@ -145,7 +149,7 @@ const ThingsILike = () => {
         if (isForward && activeSlide < slides) {
             setActiveSlide(activeSlide + 1);
             setSliderTransformValue(sliderTransformValue - 100);
-        } else if (activeSlide > 1) {
+        } else if (!isForward && activeSlide > 1) {
             setActiveSlide(activeSlide - 1);
             setSliderTransformValue(sliderTransformValue + 100);
         }
@@ -262,8 +266,8 @@ const ThingsILike = () => {
                     <TreesSectionWrap>
                         <TreesSection>
                             <TreesSectionContainer>
+                                <WalkImage></WalkImage>
                                 <PathImage></PathImage>
-                                <WizardImage></WizardImage>
                                 {treeContainers.map((container, i) => {
                                     return <TreeContainer 
                                     top={treeContainers[i].top} left={treeContainers[i].left} zIndex={treeContainers[i].zIndex} key={i}>
@@ -273,7 +277,11 @@ const ThingsILike = () => {
                                         <Blob color='#74B72E' top='27%' left='9%' measure='43%' position='absolute' delay='-2'></Blob>
                                     </TreeContainer>
                                 })}
+                                <CabinImage></CabinImage>
                             </TreesSectionContainer>
+                            <DeerImage></DeerImage>
+                            <DeerFemaleImage></DeerFemaleImage>
+                            <DeerBabyImage></DeerBabyImage>
                         </TreesSection>
                     </TreesSectionWrap>
                 </Slide>

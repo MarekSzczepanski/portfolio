@@ -3,24 +3,12 @@ import Image from '../components/Image';
 import styled, { keyframes } from 'styled-components';
 import Blob from '../components/blob';
 
-const WizardAnimation = () => keyframes`
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(10deg); }
-    70% { transform: rotate(-15deg); }
-`
-
-const WizardContainer = styled.div`
+const WalkContainer = styled.div`
     position: absolute;
     top: 71%;
-    left: 38.5%;
+    left: 41%;
     width: 10vw;
-    transform: scale(-1, 1);
     z-index: 24;
-    &:hover {
-        > div {
-            animation: ${WizardAnimation()} .5s ease-in;
-        }
-    }
 `
 
 export const ChevronLeft = (props) => {
@@ -89,18 +77,18 @@ export const PathImage = () => {
     )
 }
 
-export const WizardImage = () => {
+export const WalkImage = () => {
     return (
-        <WizardContainer>
+        <WalkContainer>
             <Image
-            src={'wizard.png'}
-            alt='wizard'
+            src={'walk.png'}
+            alt='walk'
             style={{
                 width: '100%',
                 height: 'auto'
             }}
             />
-        </WizardContainer>
+        </WalkContainer>
     );
 }
 
@@ -165,7 +153,280 @@ export const treeContainers = [
         zIndex: '17',
         treeWidth: '6.5vw'
     },
+    {
+        top: '-3.5vw',
+        left: '45.5vw',
+        zIndex: '17',
+        treeWidth: '6.5vw'
+    },
+    {
+        top: '1.5vw',
+        left: '42vw',
+        zIndex: '17',
+        treeWidth: '8.5vw'
+    },
+    {
+        top: '6.5vw',
+        left: '32vw',
+        zIndex: '17',
+        treeWidth: '10.5vw'
+    },
+    {
+        top: '4.5vw',
+        left: '63vw',
+        zIndex: '17',
+        treeWidth: '10.5vw'
+    },
+    {
+        top: '-1.5vw',
+        left: '38vw',
+        zIndex: '16',
+        treeWidth: '7vw'
+    },
+    {
+        top: '1vw',
+        left: '29vw',
+        zIndex: '16',
+        treeWidth: '8vw'
+    },
+    {
+        top: '0',
+        left: '2vw',
+        zIndex: '16',
+        treeWidth: '7.7vw'
+    },
+    {
+        top: '-3vw',
+        left: '26vw',
+        zIndex: '12',
+        treeWidth: '6.5vw'
+    },
+    {
+        top: '-5vw',
+        left: '20vw',
+        zIndex: '12',
+        treeWidth: '6vw'
+    },
+    {
+        top: '1.5vw',
+        left: '17vw',
+        zIndex: '16',
+        treeWidth: '8vw'
+    },
+    {
+        top: '18vw',
+        left: '-11vw',
+        zIndex: '24',
+        treeWidth: '19vw'
+    },
+    {
+        top: '16vw',
+        left: '-22vw',
+        zIndex: '22',
+        treeWidth: '17vw'
+    },
+    {
+        top: '8vw',
+        left: '-28vw',
+        zIndex: '21',
+        treeWidth: '14vw'
+    },
+    {
+        top: '21vw',
+        left: '-32vw',
+        zIndex: '22',
+        treeWidth: '19vw'
+    },
+    {
+        top: '3vw',
+        left: '-20vw',
+        zIndex: '20',
+        treeWidth: '10vw'
+    },
+    {
+        top: '0',
+        left: '-15vw',
+        zIndex: '19',
+        treeWidth: '7.5vw'
+    },
+    {
+        top: '1.5vw',
+        left: '-8vw',
+        zIndex: '19',
+        treeWidth: '9vw'
+    },
+    {
+        top: '-2vw',
+        left: '13vw',
+        zIndex: '19',
+        treeWidth: '7vw'
+    },
+    {
+        top: '-3vw',
+        left: '7vw',
+        zIndex: '12',
+        treeWidth: '6.5vw'
+    },
+    {
+        top: '-3vw',
+        left: '-2vw',
+        zIndex: '12',
+        treeWidth: '6.5vw'
+    },
+    {
+        top: '-3vw',
+        left: '-9vw',
+        zIndex: '12',
+        treeWidth: '5.7vw'
+    },
+    {
+        top: '18vw',
+        left: '56vw',
+        zIndex: '25',
+        treeWidth: '18vw'
+    },
+    {
+        top: '20vw',
+        left: '92vw',
+        zIndex: '25',
+        treeWidth: '20vw'
+    },
+    {
+        top: '10vw',
+        left: '66vw',
+        zIndex: '19',
+        treeWidth: '13vw'
+    },
+    {
+        top: '5vw',
+        left: '76vw',
+        zIndex: '18',
+        treeWidth: '10.5vw'
+    },
+    {
+        top: '9vw',
+        left: '99vw',
+        zIndex: '18',
+        treeWidth: '12vw'
+    },
+    {
+        top: '2vw',
+        left: '92vw',
+        zIndex: '18',
+        treeWidth: '10vw'
+    },
+    {
+        top: '-2.5vw',
+        left: '86vw',
+        zIndex: '11',
+        treeWidth: '8vw'
+    },
+    {
+        top: '.7vw',
+        left: '72.5vw',
+        zIndex: '17',
+        treeWidth: '8.5vw'
+    },
+    {
+        top: '-5.3vw',
+        left: '66vw',
+        zIndex: '15',
+        treeWidth: '6vw'
+    },
+    {
+        top: '-3.3vw',
+        left: '77vw',
+        zIndex: '15',
+        treeWidth: '7vw'
+    },
+    {
+        top: '-5.8vw',
+        left: '82vw',
+        zIndex: '18',
+        treeWidth: '5.5vw'
+    },
+    {
+        top: '1vw',
+        left: '82vw',
+        zIndex: '12',
+        treeWidth: '8.5vw'
+    },
+    {
+        top: '-1vw',
+        left: '67vw',
+        zIndex: '16',
+        treeWidth: '8vw'
+    },
+    {
+        top: '-4vw',
+        left: '34vw',
+        zIndex: '11',
+        treeWidth: '6vw'
+    },
 ]
+
+export const DeerImage = () => {
+    return (
+        <Image
+        src={'deer.png'}
+        alt='Deer'
+        style={{
+            position: 'absolute',
+            top: '12vw',
+            left: '51vw',
+            width: '6vw'
+        }}
+        />
+    )
+}
+
+export const DeerFemaleImage = () => {
+    return (
+        <Image
+        src={'deer-female.png'}
+        alt='Deer female'
+        style={{
+            position: 'absolute',
+            top: '14vw',
+            left: '46vw',
+            width: '4.5vw',
+            transform: 'scale(-1, 1)'
+        }}
+        />
+    )
+}
+
+export const DeerBabyImage = () => {
+    return (
+        <Image
+        src={'deer-baby.png'}
+        alt='Deer baby'
+        style={{
+            position: 'absolute',
+            top: '15.5vw',
+            left: '49.5vw',
+            width: '3vw',
+            transform: 'scale(-1, 1)'
+        }}
+        />
+    )
+}
+
+export const CabinImage = () => {
+    return (
+        <Image
+        src={'cabin.png'}
+        alt='cabin'
+        style={{
+            position: 'absolute',
+            top: '6vw',
+            left: '75.5vw',
+            width: '30.2vw',
+            zIndex: '20'
+        }}
+        />
+    )
+}
 
 /* Things I like - Web3 */
 
@@ -441,7 +702,7 @@ export const BassImage = () => {
         src={'bass.png'}
         alt='bass'
         style={{
-            animation: 'bassSecondAnimation 3s ease-out 1.5s infinite'
+            animation: 'bassSecondAnimation 3s ease-out 1.5s infinite',
         }}
         />
     )
