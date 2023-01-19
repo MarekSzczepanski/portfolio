@@ -15,7 +15,7 @@ const morph = () => keyframes`
     80% { border-radius: 37% 63% 35% 65% / 38% 45% 55% 62%; }
     90% { border-radius: 38% 62% 52% 48% / 45% 53% 47% 55%; }
 `
-const Container = styled.div`
+const Container = styled.a`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,13 +26,14 @@ const Container = styled.div`
     border: solid .23vw transparent;
     border-radius: 50%;
     background-color: ${props => props.color};
-    color: ${props => props.fontColor ? props.fontColor : '#fff'};
+    color: ${props => props.fontColor ? props.fontColor : '#fff'} !important;
     transition: border-color .2s ease-in;
     animation: ${morph} 30s linear ${props => props.delay} infinite alternate;
     @media (min-width: 1024px) {
         cursor: pointer;
         &:hover {
             border-color: #000;
+            text-decoration: none;
         }
     }
     @media (max-width: 1023px) {
@@ -53,9 +54,9 @@ const H4 = styled.h4`
     }
 `
 
-const Project = ({image, customClass, color, text, fontColor, innerBlobColor, delay}) => {
+const Project = ({image, customClass, color, text, fontColor, innerBlobColor, delay, href}) => {
     return (
-        <Container color={color} fontColor={fontColor} delay={delay}>
+        <Container color={color} fontColor={fontColor} delay={delay} href={href} target='_blank' rel='noopener'>
             <Blob position='relative' measure='10vw' mMeasure='37vw' mTop='18vw' mLeft='26vw' image={image} customClass={customClass} color={innerBlobColor} cursor='pointer'></Blob>
             <H4>{text}</H4>
         </Container>

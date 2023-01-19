@@ -44,9 +44,9 @@ const IndexPage = () => (
     <Wrap>
       <h3>projects</h3>
       <ProjectsContainer>
-        <Project color='royalblue' image='btc.png' customClass='project1' text='Crypto Portfolio' delay='-1s'></Project>
-        <Project color='gold' fontColor='#333' innerBlobColor='#eee' image='uploader.png' customClass='project2' text='Video Uploader' delay='-15s'></Project>
-        <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s'></Project>
+        <Project color='royalblue' image='btc.png' customClass='project1' text='Crypto Portfolio' delay='-1s' href='https://cryptocalc.vyost.usermd.net/'></Project>
+        <Project color='gold' fontColor='#333' innerBlobColor='#eee' image='uploader.png' customClass='project2' text='Video Uploader' delay='-15s' href='https://github.com/MarekSzczepanski/Video-Uploader'></Project>
+        <Project color='crimson' innerBlobColor='#ddd' image='swords.png' customClass='project3' text='Simple Adventure' delay='-6s' href='https://marekszczepanski.github.io/Simple-Adventure/'></Project>
       </ProjectsContainer>
     </Wrap>
     <ThingsILike></ThingsILike>
@@ -54,5 +54,5 @@ const IndexPage = () => (
   </Layout>
 )
 
-export const Head = () => <Seo title='Home' />
+export const Head = () => <Seo title='Marek Szczepański' />
 export default IndexPage
