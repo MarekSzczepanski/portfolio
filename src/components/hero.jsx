@@ -15,7 +15,7 @@ const H1 = styled.h1`
   text-transform: capitalize;
   z-index: 2;
   @media(max-width: 1023px) {
-    font-size: 12.2vw;
+    font-size: 11vw;
     line-height: 13.5vw;
     margin-top: 38vw;
   }
@@ -28,7 +28,7 @@ const H2 = styled.h2`
   font-weight: 500;
   z-index: 2;
   @media(max-width: 1023px) {
-    font-size: 8.5vw;
+    font-size: 7.5vw;
     padding-bottom: 2vw;
   }
 `
