@@ -18,9 +18,10 @@ export const ChevronLeft = (props) => {
         alt='chevron'
         style={{
             position: 'absolute',
-            left: '1.5vw',
-            width: '2vw',
-            marginTop: '14.3vw',
+            top: `${props.top}`,
+            left: `${props.left}`,
+            width: `${props.width}`,
+            marginTop: `${props.marginTop}`,
             opacity: `${props.active ? 1 : .5}`,
             transform: 'rotate(180deg)',
             cursor: `${props.active ? 'pointer' : 'default'}`,
@@ -37,9 +38,10 @@ export const ChevronRight = (props) => {
         alt='chevron'
         style={{
             position: 'absolute',
-            left: '96.5vw',
-            width: '2vw',
-            marginTop: '14.3vw',
+            top: `${props.top}`,
+            left: `${props.left}`,
+            width: `${props.width}`,
+            marginTop: `${props.marginTop}`,
             opacity: `${props.active ? 1 : .5}`,
             cursor: `${props.active ? 'pointer' : 'default'}`,
             zIndex: '3'

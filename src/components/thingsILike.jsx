@@ -186,10 +186,10 @@ const ThingsILike = () => {
             <H3>Things I like</H3>
           <DesktopContainer>
             <div onClick={(e) => handleClick(e)} role='presentation'>
-                <ChevronLeft active={activeSlide > 1}></ChevronLeft>
+                <ChevronLeft active={activeSlide > 1} width='2vw' marginTop='14.3vw' left='1.5vw'></ChevronLeft>
             </div>
             <div onClick={(e) => handleClick(e, true)} role='presentation'>
-                <ChevronRight active={activeSlide < slides}></ChevronRight>
+                <ChevronRight active={activeSlide < slides} width='2vw' marginTop='14.3vw' left='96.5vw'></ChevronRight>
             </div>
             <SliderContainer translate={sliderTransformValue}>
                 <Slide>
@@ -227,22 +227,22 @@ const ThingsILike = () => {
                         <NftImage></NftImage>
                         <VerticalTextContainer top='-30vw' left='13vw'>
                             {verticalTextLetters.map((letter, i) => {
-                                return <VerticalText delay={i * 0.1}>{letter}</VerticalText>
+                                return <VerticalText delay={i * 0.1} key={i}>{letter}</VerticalText>
                             })}
                         </VerticalTextContainer>
                         <VerticalTextContainer top='-40vw' left='36vw'>
                             {verticalTextLetters.map((letter, i) => {
-                                return <VerticalText delay={i * 0.1 - 2}>{letter}</VerticalText>
+                                return <VerticalText delay={i * 0.1 - 2} key={i}>{letter}</VerticalText>
                             })}
                         </VerticalTextContainer>
                         <VerticalTextContainer top='-47vw' left='57vw'>
                             {verticalTextLetters.map((letter, i) => {
-                                return <VerticalText delay={i * 0.1 - 1}>{letter}</VerticalText>
+                                return <VerticalText delay={i * 0.1 - 1} key={i}>{letter}</VerticalText>
                             })}
                         </VerticalTextContainer>
                         
-                        {networkImages.map(image => {
-                            return <NetworkImage top={image.top} left={image.left}></NetworkImage>
+                        {networkImages.map((image, i) => {
+                            return <NetworkImage top={image.top} left={image.left} key={i}></NetworkImage>
                         })}
                     </Web3Container>
                 </Slide>
