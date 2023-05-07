@@ -67,13 +67,16 @@ const Experience = () => (
         <H5>Frontend Developer</H5>
         <H6>THINK IT CODE IT LIMITED | 08.2021 – present</H6>
             <ul>
-                <Li>Developing e-commerce website (HTML + CSS + JS)</Li>
+                <Li>Developing custom e-commerce website (HTML + CSS + JS)</Li>
                 <Li>Developing Twitch e-commerce extension</Li>
                 <Li>Writing unit and e2e tests</Li>
+                <Li>Creating and managing Github Actions CI/CD pipeline</Li>
                 <Li>Doing simple backend tasks</Li>
-                <Li>Creating and managing CI/CD pipeline</Li>
                 <Li>Managing SQL database</Li>
-                <Li>Creating an admin dashboard in React</Li>
+                <Li>Creating admin dashboard with React</Li>
+                <Li>Creating Shopify stores</Li>
+                <Li>Creating Landing pages</Li>
+                <Li>Creating Three.js animations</Li>
             </ul>
         </Container>
     </Wrap>
