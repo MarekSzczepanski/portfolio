@@ -50,7 +50,7 @@ const skills = [
     heading: 'javascript',
     description: 
     <div>
-      <H4 color='#74B72E'>I use Javascript at my everyday's work for various purposes, such as:</H4>
+      <H4 color='#74B72E'>I use Javascript at my work for various purposes, such as:</H4>
       <ul>
         <BulletLi>Creating 100% custom scripts</BulletLi>
         <BulletLi>Creating and modifying frontend REST endpoints and connecting with backend endpoints</BulletLi>
@@ -107,6 +107,7 @@ const skills = [
         <BulletLi>flexbox and grid</BulletLi>
         <BulletLi>animations</BulletLi>
         <BulletLi>RWD</BulletLi>
+        <BulletLi>cross browser issues</BulletLi>
         <BulletLi>sass + scss</BulletLi>
         <BulletLi>Bootstrap 4</BulletLi>
       </ul>
@@ -146,6 +147,20 @@ const skills = [
         <BulletLi>Pull Requests: describing, reviewing, updating, merging</BulletLi>
         <BulletLi>Github features such as Github Actions and Github Pages</BulletLi>
        </ul>
+    </div>
+  },
+  {
+    heading: 'TESTS',
+    description:
+    <div>
+      <H4 color='gold'>Some of important aspects of testing that I can do:</H4>
+      <ul>
+        <BulletLi>Write unit tests with Jest</BulletLi>
+        <BulletLi>Create e2e tests with Cypress</BulletLi>
+        <BulletLi>Add my tests to ci/cd pipelines such as Github Actions</BulletLi>
+        <BulletLi>Cross-browser and cross-platform functionality testing with tools like Browserstack</BulletLi>
+        <BulletLi>Visual tests with tools like Percy</BulletLi>
+      </ul>
     </div>
   }
 ]
