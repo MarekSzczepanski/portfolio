@@ -44,7 +44,7 @@ const projects = [
     customClass: 'project1',
     text: 'Crypto Portfolio',
     delay: '-1s',
-    href: 'https://cryptocalc.vyost.usermd.net/',
+    href: 'https://cryptoportfolio.vyost.usermd.net/',
   },
   {
     color: 'gold',
