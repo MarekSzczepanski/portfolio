@@ -155,8 +155,8 @@ const skills = [
     <div>
       <H4 color='gold'>Some of important aspects of testing that I can do:</H4>
       <ul>
-        <BulletLi>Write unit tests with Jest</BulletLi>
-        <BulletLi>Create e2e tests with Cypress</BulletLi>
+        <BulletLi>Unit tests with Jest</BulletLi>
+        <BulletLi>E2e tests with Cypress</BulletLi>
         <BulletLi>Add my tests to ci/cd pipelines such as Github Actions</BulletLi>
         <BulletLi>Cross-browser and cross-platform functionality testing with tools like Browserstack</BulletLi>
         <BulletLi>Visual tests with tools like Percy</BulletLi>
