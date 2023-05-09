@@ -132,7 +132,7 @@ const Hero = () => {
             return object.length === 1 ? <Letter onMouseEnter={handleMouseEnter} bounce={nameRefs[i+1+nameLetters.length].current} color={colors2[i]} data-letter={i+1+nameLetters.length} key={i+nameLetters.length}>{titleLetters[i]}</Letter> : <span key={i+nameLetters.length}> </span>;
           })}
         </H2>
-        <About>I'm settled in Ostróda, Poland. I have 3 years of experience with Frontend. I like to work with React and NodeJS, preferably remote. Coding is neverending challenge that keeps me excited.</About>
+        <About>I'm settled in Ostróda, Poland. I have 3 years of Frontend experience. I like to work with React, Vanilla JavaScript and NodeJS. Coding is a neverending challenge that keeps me excited.</About>
       </div>
       <Blob color='gray' measure='33.5vw' top='5vw' left='60vw' mMeasure='48vw' mTop='10px' mLeft='49vw' image={'marek.jpg'}></Blob>
       <Blob color='royalblue' measure='12vw' top='3vw' left='22vw' delay='-3' mMeasure='20vw' mTop='2vw' mLeft='5vw' translate={translate1} mTranslate={mTranslate1}></Blob>
