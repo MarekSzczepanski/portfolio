@@ -40,7 +40,7 @@ const Container = styled.a`
         position: relative;
         width: 88vw;
         height: 88vw;
-        margin: 3.3vw 0 0 1vw;
+        margin: 3.3vw 0 5vw 1vw;
     }
 `
 const H4 = styled.h4`
@@ -54,11 +54,11 @@ const H4 = styled.h4`
     }
 `
 
-const Project = ({image, customClass, color, text, fontColor, innerBlobColor, delay, href}) => {
+const Project = ({image, customClass, color, name, fontColor, innerBlobColor, delay, href}) => {
     return (
         <Container color={color} fontColor={fontColor} delay={delay} href={href} target='_blank' rel='noopener'>
             <Blob position='relative' measure='10vw' mMeasure='37vw' mTop='18vw' mLeft='26vw' image={image} customClass={customClass} color={innerBlobColor} cursor='pointer'></Blob>
-            <H4>{text}</H4>
+            <H4>{name}</H4>
         </Container>
     )
 }
