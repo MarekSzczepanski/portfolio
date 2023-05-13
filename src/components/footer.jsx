@@ -9,10 +9,6 @@ const FooterContainer = styled.footer`
     margin: 4vw 0 0 -5vw;
     padding: 2.5vw 5vw;
     background-color: orange;
-    > a {
-      width: 40vw;
-      font-size: 1vw;
-    }
     > h4 {
       width: 90vw;
     }
@@ -20,10 +16,9 @@ const FooterContainer = styled.footer`
       flex-direction: column;
       margin-top: 9.5vw;
       padding: 5vw;
-      > a, h4 {
-        width: 90vw;
-        margin-top: 20px;
-        font-size: 2.5vw;
+      h4 {
+        margin-top: 2px;
+        font-size: 4.5vw;
         text-align: center;
       }
     }
@@ -32,7 +27,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <h4>© 2023 Marek Szczepański. All Rights Reserved. </h4>
+      <h4>© 2023 Marek Szczepański</h4>
     </FooterContainer>
   )
 }
