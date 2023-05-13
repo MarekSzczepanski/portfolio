@@ -10,6 +10,7 @@ const Container = styled.section`
 `
 const H4 = styled.h4`
   margin: 2vw 0 1vw;
+  padding-right: 1vw;
   font-size: 1.2vw;
   line-height: 1.7vw;
   color: ${props => props.color};
@@ -26,12 +27,14 @@ const Ul = styled.ul`
 const Li = styled.li`
   min-width: 100%;
   margin-right: 10vw;
+  padding-right: 1vw;
   list-style-type: none;
   @media (max-width: 1023px) {
     min-width: 90vw;
   }
 `
 const BulletLi = styled.li`
+  padding-top: .4vw;
   font-size: 1vw;
   color: #555;
   @media (max-width: 1023px) {
@@ -39,11 +42,24 @@ const BulletLi = styled.li`
   }
 `
 const P = styled.p`
+  padding-right: 1vw;
   font-size: 1vw;
   color: #555;
   @media (max-width: 1023px) {
     font-size: 3.1vw;
   }
+`
+const Span = styled.span`
+  font-weight: 600;
+`
+const H3 = styled.h3`
+  @media (max-width: 1023px) {
+    text-align: left;
+  }
+`
+const Section = styled.section`
+  max-width: 95vw;
+  padding: 6vw 6vw 0 0;
 `
 const skills = [
   {
@@ -150,7 +166,7 @@ const skills = [
     </div>
   },
   {
-    heading: 'TESTS',
+    heading: 'Tests',
     description:
     <div>
       <H4 color='gold'>Some of important aspects of testing that I can do:</H4>
@@ -162,7 +178,30 @@ const skills = [
         <BulletLi>Visual tests with tools like Percy</BulletLi>
       </ul>
     </div>
-  }
+  },
+  {
+    heading: 'English',
+    description:
+    <div>
+      <P>In 2019 I received a TOEIC certificate that confirms my B2 level in English.</P>
+      <P>During my recent job, I used my English on a daily basis for conversations with native english speakers.</P>
+    </div>
+  },
+  {
+    heading: 'Soft Skills',
+    description:
+    <div>
+      <H4 color='#74B72E'>My character traits:</H4>
+      <ul>
+        <BulletLi><Span>Pro-active communication</Span> - I like to answer questions before they are asked.</BulletLi>
+        <BulletLi><Span>Technical translation</Span> - I am good at explaining technical things for non-technical people.</BulletLi>
+        <BulletLi><Span>Valuable solutions</Span> - I understand that clients require lucrative code, not just passion driven development.</BulletLi>
+        <BulletLi><Span>Developmental developer</Span> - I keep learning in my free time, apart from 'just in time learning'.</BulletLi>
+        <BulletLi><Span>Responsible employee</Span> - I am ready to take on extra hours to meet deadlines and deal with emergency.</BulletLi>
+        <BulletLi><Span>Eager for criticism</Span> - I believe feedback is the key factor for effective work and learning.</BulletLi>
+      </ul>
+    </div>
+  },
 ]
 
 const SkillDescription = () => {
@@ -212,20 +251,45 @@ const SkillDescription = () => {
 
   return (
     <Container onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-      <Ul translate={translate}>
-        {skills.map((skill, i) => {
-          return <Li key={i}>
-            <h3>my {skill.heading}</h3>
-            {skill.description}
-          </Li>
-        })}
-      </Ul>
-      <div onClick={(e) => handleClick(e)} role='presentation'>
-        <ChevronLeft active={activeSlide} width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '-1.5vw' : '-3.5vw'}></ChevronLeft>
-      </div>
-      <div onClick={(e) => handleClick(e, true)} role='presentation'>
-        <ChevronRight active={activeSlide < skills.length - 1}  width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '86vw' : '33vw'}></ChevronRight>
-      </div>
+      <section>
+        <Ul translate={translate}>
+          {skills.map((skill, i) => {
+            return <Li key={i}>
+              <h3>my {skill.heading}</h3>
+              {skill.description}
+            </Li>
+          })}
+        </Ul>
+        <div onClick={(e) => handleClick(e)} role='presentation'>
+          <ChevronLeft active={activeSlide} width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '-1.5vw' : '-3.5vw'}></ChevronLeft>
+        </div>
+        <div onClick={(e) => handleClick(e, true)} role='presentation'>
+          <ChevronRight active={activeSlide < skills.length - 1}  width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '86vw' : '33vw'}></ChevronRight>
+        </div>
+      </section>
+      <Section>
+        <H3>My next goals</H3>
+        <ul>
+          <BulletLi>Typescript</BulletLi>
+          <BulletLi>NextJS</BulletLi>
+          <BulletLi>More React!</BulletLi>
+          <BulletLi>Never enough of JavaScript</BulletLi>
+        </ul>
+      </Section>
+      <Section>
+        <H3>My education</H3>
+        <H4>University of Warmia and Mazury in Olsztyn</H4>
+        <P>Faculty of Agriculture and Forestry - <Span>Engineer of Forestry</Span></P>
+      </Section>
+      <Section>
+        <H3>My dream job</H3>
+        <ul>
+          <BulletLi>Clear career path</BulletLi>
+          <BulletLi>Code reviews included</BulletLi>
+          <BulletLi>Being 100% honest</BulletLi>
+          <BulletLi>Openly communicating mistakes</BulletLi>
+        </ul>
+      </Section>
     </Container>
   )
 }
