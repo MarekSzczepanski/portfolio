@@ -10,16 +10,21 @@ const Wrap = styled.div`
         width: 100%;
         margin-top: 9vw;
         margin-left: 0;
-        text-align: center;
+    }
+`
+const H3 = styled.h3`
+    @media (max-width: 1023px) {
+        text-align: left;
     }
 `
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
     padding-bottom: 2vw;
     @media (max-width: 1023px) {
-        display: inline-block;
         padding-bottom: 3vw;
+    }
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
     }
 `
 const H5 = styled.h5`
@@ -34,6 +39,7 @@ const H6 = styled.h6`
     border-bottom: 1px solid;
     font-size: 1.2vw;
     @media (max-width: 1023px) {
+        display: inline-block;
         font-size: 4vw;
     }
 `
@@ -51,7 +57,7 @@ const Li = styled.li`
 
 const Experience = () => (
     <Wrap>
-        <h3>Experience</h3>
+        <H3>Experience</H3>
         <Container>
             <H5>Frontend Developer</H5>
             <H6>ZABART.COM | 09.2020 - 07.2021</H6>
