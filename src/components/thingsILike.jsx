@@ -92,6 +92,9 @@ const TreesSection = styled.div`
 `
 const TreesSectionContainer = styled.div`
   transform: scale(-.7, .7);
+  -webkit-box-shadow: 0px 4px 0px 0px rgba(255, 165, 0, 1);
+  -moz-box-shadow: 0px 4px 0px 0px rgba(255, 165, 0, 1);
+  box-shadow: 0px 4px 0px 0px rgba(255, 165, 0, 1);
 `
 const TreeContainer = styled.div`
   position: absolute;
