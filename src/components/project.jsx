@@ -50,7 +50,7 @@ const H4 = styled.h4`
     @media (max-width: 1023px) {
         max-width: 55vw;
         margin-top: 55vw;
-        font-size: 6vw;
+        font-size: 5vw;
     }
 `
 
