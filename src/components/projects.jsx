@@ -3,10 +3,15 @@ import styled from 'styled-components';
 import Project from './project';
 
 const Container = styled.section`
+  @media (max-width: 1023px) {
+    padding-top: 9vw;
+  }
   @media (min-width: 1024px) {
     position: relative;
     width: 62.1%;
-    padding-left: 5vw;
+    padding: 3vw 5vw 0 0;
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
     background-color: #f8f8ff;
     &:after {
       content: '';
@@ -27,13 +32,26 @@ const ProjectsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @media (max-width: 1024px) {
+  max-width: 100%;
+  @media (max-width: 1023px) {
     flex-direction: column;
+  }
+  @media (min-width: 1024px) {
+    margin-top: 3vw;
+    border-top: 1px solid #555;
   }
 `
 const ProjectContainer = styled.article`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @media (min-width: 1024px) {
+    width: 50%;
+    border-bottom: 1px solid #555;
+    &:nth-of-type(odd) {
+      border-right: 1px solid #555;
+    }
+  }
 `
 const ProjectDescription = styled.div`
   width: 90vw;

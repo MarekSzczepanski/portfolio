@@ -17,8 +17,13 @@ const Container = styled.div`
   position: relative;
   margin-top: 4vw;
   @media (max-width: 1023px) {
+    width: ${props => props.mobileWidth};
     flex-direction column;
     margin-top: 9.5vw;
+  }
+  @media (min-width: 1024px) {
+    width: ${props => props.width};
+    margin-left: ${props => props.marginLeft};
   }
 `
 
@@ -30,7 +35,7 @@ const IndexPage = () => (
       <Skills></Skills>
       <Experience></Experience>
     </Container>
-    <Container>
+    <Container width='110vw' mobileWidth='90vw' marginLeft='-5vw'>
       <SkillDescription></SkillDescription>
       <Projects></Projects>
     </Container>

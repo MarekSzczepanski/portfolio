@@ -4,8 +4,13 @@ import styled from 'styled-components';
 import { ChevronLeft, ChevronRight} from './gatsbyImages';
 
 const Container = styled.section`
+  max-width: 100%;
   @media (min-width: 1024px) {
     width: 37.9%;
+    margin-left: -5vw;
+    padding-left: 5vw;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
   }
 `
 const H4 = styled.h4`
@@ -27,7 +32,6 @@ const Ul = styled.ul`
 const Li = styled.li`
   min-width: 100%;
   margin-right: 10vw;
-  padding-right: 1vw;
   list-style-type: none;
   @media (max-width: 1023px) {
     min-width: 90vw;
@@ -59,7 +63,13 @@ const H3 = styled.h3`
 `
 const Section = styled.section`
   max-width: 95vw;
-  padding: 6vw 6vw 0 0;
+  @media (max-width: 1023px) {
+    padding-bottom: 6vw;
+  }
+  @media (min-width: 1024px) {
+    padding: 3vw 2.5vw 3vw 5vw;
+    border-top: ${props => props.isBorderHidden ? null : '1px solid #555'};
+  }
 `
 const skills = [
   {
@@ -205,10 +215,11 @@ const skills = [
 ]
 
 const SkillDescription = () => {
+  const initialDesktopTranslate = 39.2;
   const [isMobile, setIsMobile] = useState(true);
   const [activeSlide, setActiveSlide] = useState(0);
   const [translate, setTranslate] = useState(0);
-  const [translateChangeValue, setTranslateChangeValue] = useState(43.6);
+  const [translateChangeValue, setTranslateChangeValue] = useState(initialDesktopTranslate);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -218,7 +229,7 @@ const SkillDescription = () => {
 
   useEffect(() => {
     if (isMobile) setTranslateChangeValue(100);
-    else setTranslateChangeValue(43.6);
+    else setTranslateChangeValue(initialDesktopTranslate);
   }, [isMobile]);
 
   const slide = (translateChangeValue, activeSlideValue) => {
@@ -251,7 +262,7 @@ const SkillDescription = () => {
 
   return (
     <Container onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
-      <section>
+      <Section isBorderHidden={true}>
         <Ul translate={translate}>
           {skills.map((skill, i) => {
             return <Li key={i}>
@@ -261,12 +272,12 @@ const SkillDescription = () => {
           })}
         </Ul>
         <div onClick={(e) => handleClick(e)} role='presentation'>
-          <ChevronLeft active={activeSlide} width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '-1.5vw' : '-3.5vw'}></ChevronLeft>
+          <ChevronLeft active={activeSlide} width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '3vw'} left={isMobile ? '-1.5vw' : '1.5vw'}></ChevronLeft>
         </div>
         <div onClick={(e) => handleClick(e, true)} role='presentation'>
-          <ChevronRight active={activeSlide < skills.length - 1}  width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '0'} left={isMobile ? '86vw' : '33vw'}></ChevronRight>
+          <ChevronRight active={activeSlide < skills.length - 1}  width={isMobile ? '5vw' : '2vw'} marginTop='1vw' top={isMobile ? '2.75vw' : '3vw'} left={isMobile ? '86vw' : '33vw'}></ChevronRight>
         </div>
-      </section>
+      </Section>
       <Section>
         <H3>My next goals</H3>
         <ul>
