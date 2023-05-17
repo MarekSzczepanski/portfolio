@@ -9,7 +9,7 @@ const Morph = keyframes`
   67% { border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; }
   80% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
   100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-`
+`;
 const Move = (translate) => keyframes`
   0% { transform: translate(${translate.x1}, ${translate.y1}) rotate(0deg) scale(1);}
   12.5% { transform: translate(${translate.x2}, ${translate.y2}) rotate(45deg) scale(0.7);}
@@ -20,7 +20,7 @@ const Move = (translate) => keyframes`
   75% { transform: translate(${translate.x7}, ${translate.y7}) rotate(270deg) scale(0.6);}
   87.5% { transform: translate(${translate.x8}, ${translate.y8}) rotate(315deg) scale(0.7);}
   100% { transform: translate(${translate.x9}, ${translate.y9}) rotate(360deg) scale(1);}
-`
+`;
 const Move2 = (translate) => keyframes`
   0% { transform: translate(${translate.x1}, ${translate.y1}) rotate(0deg) scale(.8, .6);}
   12.5% { transform: translate(${translate.x2}, ${translate.y2}) rotate(45deg) scale(.9, .6);}
@@ -42,11 +42,11 @@ const Move2 = (translate) => keyframes`
     87.5% { transform: translate(${translate.x8}, ${translate.y8}) rotate(315deg) scale(.8, .9);}
     100% { transform: translate(${translate.x9}, ${translate.y9}) rotate(360deg) scale(.9, .7);}
   }
-`
+`;
 const BlackAndWhiteText = () => keyframes`
   from {color: white}
   to {color: black}
-`
+`;
 const ColorChange = () => keyframes`
   0% { background-color: crimson; }
   10% { background-color: crimson; }
@@ -67,105 +67,120 @@ const ColorChange = () => keyframes`
   93% {background-color: #68A063; }
   95% {background-color: #68A063; }
   100% {background-color: crimson; }
-`
+`;
 const RotateBack = (forceResizeRestart) => keyframes`
   0% { transform: rotate(360deg); }
   25% { transform: rotate(270deg); }
   50% { transform: rotate(180deg); }
   75% { transform: rotate(90deg); }
   100% { transform: rotate(${forceResizeRestart}); }
-`
+`;
 const Wrap = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 const Circle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: ${props => props.position ? props.position : 'absolute'};
-  top: ${props => props.top ? props.top : '0'};
-  left: ${props => props.left ? props.left : '0'};
-  width: ${props => props.measure};
-  height: ${props => props.measure};
-  margin: ${props => props.margin};
+  position: ${(props) => (props.position ? props.position : 'absolute')};
+  top: ${(props) => (props.top ? props.top : '0')};
+  left: ${(props) => (props.left ? props.left : '0')};
+  width: ${(props) => props.measure};
+  height: ${(props) => props.measure};
+  margin: ${(props) => props.margin};
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background-color: ${props => props.color ? props.color : '#F8F8ff'};
-  border: solid .23vw ${props => props.border ? props.border : '#000'};
-  color: ${props => props.colorChange ? 'white' : 'black'};
+  background-color: ${(props) => (props.color ? props.color : '#F8F8ff')};
+  border: solid .23vw ${(props) => (props.border ? props.border : '#000')};
+  color: ${(props) => (props.colorChange ? 'white' : 'black')};
   overflow: hidden;
-  transform: translate(${props => props.skill ? '-1500px, 150px' : 0}) scale(${props => props.skill ? '0.6' : '1'});
+  transform: translate(${(props) => (props.skill ? '-1500px, 150px' : 0)}) scale(${(props) =>
+  props.skill ? '0.6' : '1'});
   transition: background-color .2s ease-in, color .2s ease-in;
   animation: 
-  ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s,
-  ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s,
-  ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
-  ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
-  cursor: ${props => props.cursor ? props.cursor : 'default'};
-  z-index: ${props => props.zIndex ? props.zIndex : 0};
+  ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s,
+  ${(props) =>
+    props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${(
+  props
+) => (props.delay ? props.delay : 0)}s,
+  ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite,
+  ${(props) => (props.colorChange ? Move2(props.translate) : null)} 23s linear infinite;
+  cursor: ${(props) => (props.cursor ? props.cursor : 'default')};
+  z-index: ${(props) => (props.zIndex ? props.zIndex : 0)};
   @media (min-width: 1024px) {
     &:hover {
       > span {
-        color: ${props => props.hoverFontColor ? props.hoverFontColor : null};
+        color: ${(props) => (props.hoverFontColor ? props.hoverFontColor : null)};
       }
-      background-color: ${props => props.hoverColor ? props.hoverColor : null};
+      background-color: ${(props) => (props.hoverColor ? props.hoverColor : null)};
       animation: 
-      ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s, 
-      ${props => props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s, 
-      ${props => props.colorChange ? ColorChange() : null} 23s linear infinite, 
-      ${props => props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
-      ${props => props.colorChange ? BlackAndWhiteText() : null} .3s linear infinite alternate;
+      ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s, 
+      ${(props) =>
+        props.translate && !props.colorChange
+          ? Move(props.translate)
+          : null} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s, 
+      ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite, 
+      ${(props) => (props.colorChange ? Move2(props.translate) : null)} 23s linear infinite,
+      ${(props) => (props.colorChange ? BlackAndWhiteText() : null)} .3s linear infinite alternate;
     }
   }
   @media (max-width: 1023px) {
     position: absolute;
-    top: ${props => props.mTop};
-    left: ${props => props.mLeft};
-    width: ${props => props.mMeasure};
-    height: ${props => props.mMeasure};
+    top: ${(props) => props.mTop};
+    left: ${(props) => props.mLeft};
+    width: ${(props) => props.mMeasure};
+    height: ${(props) => props.mMeasure};
     border-width: 3px;
     animation: 
-    ${Morph} 11.5s linear infinite ${props => props.delay ? props.delay : 0}s,
-    ${props => props.colorChange ? ColorChange() : null} 23s linear infinite,
-    ${props => props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
-    ${props => props.mTranslate && !props.colorChange ? Move(props.mTranslate) : null} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+    ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s,
+    ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite,
+    ${(props) =>
+      props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
+    ${(props) =>
+      props.mTranslate && !props.colorChange
+        ? Move(props.mTranslate)
+        : null} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s;
     }
   }
   > div {
     width: 100%;
   }
-`
+`;
 const Text = styled.span`
-  font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
-  animation: ${RotateBack('0deg')} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  font-size: ${(props) => (props.fontSize ? props.fontSize : '1vw')};
+  animation: ${RotateBack('0deg')} 23s linear infinite
+    ${(props) => (props.delay ? props.delay : 0)}s;
   @media (max-width: 1023px) {
     font-size: 4vw;
-    animation: ${RotateBack(0)} 23s linear infinite ${props => props.delay ? props.delay : 0}s ${props => props.colorChange ? 'alternate' : null};
+    animation: ${RotateBack(0)} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s
+      ${(props) => (props.colorChange ? 'alternate' : null)};
   }
-`
+`;
 const StaticText = styled.span`
-  font-size: ${props => props.fontSize ? props.fontSize : '1vw'};
-  color: ${props => props.fontColor ? props.fontColor : '#000'}; 
-  transition: color .2s ease-in;
-`
+  font-size: ${(props) => (props.fontSize ? props.fontSize : '1vw')};
+  color: ${(props) => (props.fontColor ? props.fontColor : '#000')};
+  transition: color 0.2s ease-in;
+`;
 const BlobImageContainer = styled.div`
   height: 100%;
-  animation: ${props => props.rotate ? RotateBack('0deg') : props.rotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+  animation: ${(props) => (props.rotate ? RotateBack('0deg') : props.rotateBack)} 23s linear
+    infinite ${(props) => (props.delay ? props.delay : 0)}s;
   @media (max-width: 1023px) {
-    animation: ${props => props.rotate ? RotateBack(0) : props.rotateBack} 23s linear infinite ${props => props.delay ? props.delay : 0}s;
+    animation: ${(props) => (props.rotate ? RotateBack(0) : props.rotateBack)} 23s linear infinite
+      ${(props) => (props.delay ? props.delay : 0)}s;
   }
-`
+`;
 
 const ImageStatic = (props) => {
   return (
     <BlobImageContainer>
       <Image
-      src={props.image}
-      className={props.customClass}
-      alt='profile'
-      style={{
-        height: '100%'
-      }}
+        src={props.image}
+        className={props.customClass}
+        alt="profile"
+        style={{
+          height: '100%'
+        }}
       />
     </BlobImageContainer>
   );
@@ -175,14 +190,14 @@ const ImageRotateBack = (props) => {
   return (
     <BlobImageContainer rotate={'true'}>
       <Image
-      src={props.image}
-      className={props.customClass}
-      alt='profile'
-      style={{
-        height: '100%',
-        transform: 'scale(1.2)',
-        filter: 'invert(.18)'
-      }}
+        src={props.image}
+        className={props.customClass}
+        alt="profile"
+        style={{
+          height: '100%',
+          transform: 'scale(1.2)',
+          filter: 'invert(.18)'
+        }}
       />
     </BlobImageContainer>
   );
@@ -216,37 +231,49 @@ const Blob = ({
   hoverColor,
   hoverFontColor
 }) => {
-  return ( 
+  return (
     <Wrap onClick={handleContactBlobClick}>
-      <Circle 
-      measure={measure}
-      mMeasure={mMeasure}
-      color={color}
-      position={position}
-      top={top}
-      left={left}
-      mTop={mTop}
-      mLeft={mLeft}
-      translate={translate}
-      mTranslate={mTranslate}
-      delay={delay}
-      border={borderColor}
-      borderHover={borderColorHover}
-      skill={skill}
-      zIndex={zIndex}
-      colorChange={colorChange}
-      rotateBack={rotateBack}
-      cursor={cursor}
-      hoverColor={hoverColor}
-      hoverFontColor={hoverFontColor}
+      <Circle
+        measure={measure}
+        mMeasure={mMeasure}
+        color={color}
+        position={position}
+        top={top}
+        left={left}
+        mTop={mTop}
+        mLeft={mLeft}
+        translate={translate}
+        mTranslate={mTranslate}
+        delay={delay}
+        border={borderColor}
+        borderHover={borderColorHover}
+        skill={skill}
+        zIndex={zIndex}
+        colorChange={colorChange}
+        rotateBack={rotateBack}
+        cursor={cursor}
+        hoverColor={hoverColor}
+        hoverFontColor={hoverFontColor}
       >
-        {image && rotateBack ? <ImageRotateBack image={image} customClass={customClass}></ImageRotateBack> : null}
-        {image && !rotateBack ? <ImageStatic image={image} customClass={customClass}></ImageStatic> : null}
-        {text && rotateBack ? <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>{text}</Text> : null}
-        {text && !rotateBack ? <StaticText fontSize={fontSize} fontColor={fontColor} hoverFontColor={hoverFontColor}>{text}</StaticText> : null}
+        {image && rotateBack ? (
+          <ImageRotateBack image={image} customClass={customClass}></ImageRotateBack>
+        ) : null}
+        {image && !rotateBack ? (
+          <ImageStatic image={image} customClass={customClass}></ImageStatic>
+        ) : null}
+        {text && rotateBack ? (
+          <Text delay={delay} fontSize={fontSize} colorChange={colorChange}>
+            {text}
+          </Text>
+        ) : null}
+        {text && !rotateBack ? (
+          <StaticText fontSize={fontSize} fontColor={fontColor} hoverFontColor={hoverFontColor}>
+            {text}
+          </StaticText>
+        ) : null}
       </Circle>
     </Wrap>
-  )
-}
+  );
+};
 
 export default Blob;
