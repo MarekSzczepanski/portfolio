@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Frontend Developer`,
+    title: `Front-end Developer`,
     description: `Web Developer from Poland with 3 years of experience. Likes to work with React and NodeJS, preferably remote.`,
     author: `Marek Szczepański`,
     siteUrl: `https://szczepanski.ostroda.org/`

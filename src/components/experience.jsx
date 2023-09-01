@@ -59,7 +59,7 @@ const Experience = () => (
   <Wrap>
     <H3>Experience</H3>
     <Container>
-      <H5>Frontend Developer</H5>
+      <H5>Front-end Developer</H5>
       <H6>ZABART.COM | 09.2020 - 07.2021</H6>
       <ul>
         <Li>Creating webpages based on Wordpress</Li>
@@ -70,7 +70,7 @@ const Experience = () => (
       </ul>
     </Container>
     <Container>
-      <H5>Frontend Developer</H5>
+      <H5>Front-end Developer</H5>
       <H6>THINK IT CODE IT LIMITED | 08.2021 – present</H6>
       <ul>
         <Li>Developing custom e-commerce website (HTML + CSS + JS)</Li>
@@ -83,6 +83,7 @@ const Experience = () => (
         <Li>Creating Shopify stores</Li>
         <Li>Creating Landing pages</Li>
         <Li>Creating Three.js animations</Li>
+        <Li>Creating React App using user's input to generate business slogans and images with OpenAI API</Li>
       </ul>
     </Container>
   </Wrap>

@@ -79,6 +79,20 @@ const Span = styled.span`
 
 const projects = [
   {
+    color: 'plum',
+    fontColor: '#333',
+    innerBlobColor: '#fff',
+    image: 'population-counter.png',
+    customClass: 'project3',
+    name: 'Population Counter',
+    delay: '-4s',
+    href: 'https://population-counter.vyost.usermd.net/',
+    description:
+      'This app counts average population of chosen regions of chosen countries in chosen time period.',
+    goal: 'Learning Redux, TypeScript, ESLint',
+    stack: 'React + TypeScript, Redux, ESLint (Google preset) + Prettier, Material UI, Styled Components'
+  },
+  {
     color: '#74B72E',
     innerBlobColor: '#1a1e23',
     image: 'magia.png',
@@ -97,7 +111,7 @@ const projects = [
     customClass: 'project1',
     name: 'Crypto Portfolio',
     delay: '-1s',
-    href: 'https://cryptoportfolio.vyost.usermd.net/',
+    href: 'https://crypto-portfolio.vyost.usermd.net/',
     description:
       "The application allows users to track their cryptocurrency transactions profit (or loss). \
     It has a login system. After registering and signing in, user is able to add a transaction by typing \
@@ -117,7 +131,7 @@ const projects = [
     delay: '-15s',
     href: 'https://github.com/MarekSzczepanski/Video-Uploader',
     description:
-      'The application allows users to upload their own video file on the page by using Frontend interface.',
+      'The application allows users to upload their own video file on the page by using Front-end interface.',
     goal: "Learning NodeJS + Express and it's deployment, EJS templates rendering",
     stack: 'NodeJS + Express, MySQL, EJS, REST API'
   },

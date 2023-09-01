@@ -164,11 +164,11 @@ const mTranslate3 = {
 };
 const skills = [
   'html',
-  'css',
+  'css + sass',
   'git',
   'mysql',
   'mongodb',
-  'express',
+  'MUI',
   'cypress',
   'jest',
   'gatsby',
@@ -265,7 +265,7 @@ const Skills = () => (
     <Blob
       color={'#f0DB4F'}
       border={'black'}
-      text={'javascript'}
+      text={'javascript + typescript'}
       skill={true}
       zIndex={21}
       fontSize={'1.5vw'}
@@ -278,7 +278,7 @@ const Skills = () => (
     <Blob
       color={'#61DBFB'}
       border={'black'}
-      text={'react'}
+      text={'react + redux'}
       skill={true}
       zIndex={22}
       delay={0.5}
@@ -292,7 +292,7 @@ const Skills = () => (
     <Blob
       color={'#68A063'}
       border={'black'}
-      text={'nodejs'}
+      text={'nodejs + express'}
       skill={true}
       zIndex={20}
       delay={1}

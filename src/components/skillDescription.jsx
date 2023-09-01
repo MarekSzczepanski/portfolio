@@ -80,7 +80,7 @@ const skills = [
         <ul>
           <BulletLi>Creating 100% custom scripts</BulletLi>
           <BulletLi>
-            Creating and modifying frontend REST endpoints and connecting with backend endpoints
+            Creating and modifying front-end REST endpoints and connecting with backend endpoints
           </BulletLi>
           <BulletLi>Creating animations based on various events, such as click or scroll</BulletLi>
           <BulletLi>Creating 3D Three.js animations</BulletLi>
@@ -92,6 +92,7 @@ const skills = [
         </ul>
         <H4 color="#74B72E">Some of important aspects of Javascript I understand:</H4>
         <ul>
+          <BulletLi>TypeScript</BulletLi>
           <BulletLi>procedural, functional and object oriented</BulletLi>
           <BulletLi>ES6+</BulletLi>
           <BulletLi>Asynchronous</BulletLi>
@@ -113,6 +114,7 @@ const skills = [
           <BulletLi>more SPA webpages</BulletLi>
           <BulletLi>headless cms using Gatsby and Wordpress</BulletLi>
           <BulletLi>cryptocurrency portfolio connected to Coingecko API</BulletLi>
+          <BulletLi>population counter app using Redux</BulletLi>
         </ul>
         <H4 color="crimson">Some of important aspects of React I understand:</H4>
         <ul>
@@ -351,7 +353,6 @@ const SkillDescription = () => {
       <Section>
         <H3>My next goals</H3>
         <ul>
-          <BulletLi>Typescript</BulletLi>
           <BulletLi>NextJS</BulletLi>
           <BulletLi>More React!</BulletLi>
           <BulletLi>Never enough of JavaScript</BulletLi>

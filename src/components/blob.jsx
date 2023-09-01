@@ -147,6 +147,8 @@ const Circle = styled.div`
   }
 `;
 const Text = styled.span`
+  max-width: 80%;
+  text-align: center;
   font-size: ${(props) => (props.fontSize ? props.fontSize : '1vw')};
   animation: ${RotateBack('0deg')} 23s linear infinite
     ${(props) => (props.delay ? props.delay : 0)}s;

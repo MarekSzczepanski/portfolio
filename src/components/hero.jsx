@@ -236,6 +236,7 @@ const titleLetters = [
   'o',
   'n',
   't',
+  '-',
   'e',
   'n',
   'd',
@@ -377,7 +378,7 @@ const Hero = () => {
           })}
         </H2>
         <About>
-          I'm settled in Ostróda, Poland. I have 3 years of Frontend experience. I like to work with
+          I'm settled in Ostróda, Poland. I have 3 years of Front-end experience. I like to work with
           React, Vanilla JavaScript and NodeJS. Coding is a neverending challenge that keeps me
           excited.
         </About>
