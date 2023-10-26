@@ -21,6 +21,12 @@ const Input = styled.input`
     font-family: 'Bungee';
     font-size: 2.2vmin;
     color: #fff;
+    ::-webkit-input-placeholder {
+      color: #fff;
+    }
+    ::-moz-placeholder {
+      color: #fff;
+    }
     background-color: royalblue;
     transition border-color .1s ease-in;
     ::placeholder {
@@ -41,6 +47,12 @@ const Textarea = styled.textarea`
     font-family: 'Bungee';
     font-size: 2.2vmin;
     color: #fff;
+    ::-webkit-input-placeholder {
+      color: #fff;
+    }
+    ::-moz-placeholder {
+      color: #fff;
+    }
     transition border-color .1s ease-in;
     background-color: royalblue;
     resize: none;
