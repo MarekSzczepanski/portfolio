@@ -79,6 +79,20 @@ const Span = styled.span`
 
 const projects = [
   {
+    color: 'orange',
+    fontColor: '#333',
+    innerBlobColor: '#fff',
+    image: 'charizard.png',
+    customClass: 'project3',
+    name: 'Order Charizard',
+    delay: '-11s',
+    href: 'https://order-charizard.vyost.usermd.net/',
+    description:
+      'This application allows users to draw three different Charizard Pokemon cards from the Pokemon TCG API.',
+    goal: 'Learning Jest + RTL, React Query, Formik, Husky',
+    stack: 'React + TypeScript, Redux, React Query, Axios, MSW, Formik, ESLint (Airbnb preset) + Prettier, MUI, Jest + RTL, Husky'
+  },
+  {
     color: 'plum',
     fontColor: '#333',
     innerBlobColor: '#fff',
