@@ -106,24 +106,28 @@ const skills = [
     description: (
       <div>
         <H4 color="crimson">
-          I use React for my personal projects and I would love to use it in my work. Some things I
+          I use React at my work and for most of my personal projects. Some things I
           made with React:
         </H4>
         <ul>
           <BulletLi>this portfolio</BulletLi>
-          <BulletLi>more SPA webpages</BulletLi>
+          <BulletLi>commercial SPA webpages</BulletLi>
           <BulletLi>headless cms using Gatsby and Wordpress</BulletLi>
           <BulletLi>cryptocurrency portfolio connected to Coingecko API</BulletLi>
           <BulletLi>population counter app using Redux</BulletLi>
+          <BulletLi>order charizard app using Redux, React Query, Formik and Pokemon TCG API</BulletLi>
         </ul>
         <H4 color="crimson">Some of important aspects of React I understand:</H4>
         <ul>
-          <BulletLi>hooks</BulletLi>
-          <BulletLi>redux + saga</BulletLi>
+          <BulletLi>Hooks</BulletLi>
+          <BulletLi>Redux + Saga</BulletLi>
           <BulletLi>Context API</BulletLi>
           <BulletLi>Styled Components</BulletLi>
           <BulletLi>Gatsby + GraphQL</BulletLi>
           <BulletLi>Material UI</BulletLi>
+          <BulletLi>React Query</BulletLi>
+          <BulletLi>Formik</BulletLi>
+          <BulletLi>React Testing Library</BulletLi>
         </ul>
       </div>
     )
@@ -209,7 +213,7 @@ const skills = [
       <div>
         <H4 color="gold">Some of important aspects of testing that I can do:</H4>
         <ul>
-          <BulletLi>Unit tests with Jest</BulletLi>
+          <BulletLi>Unit tests with Jest and React Testing Library</BulletLi>
           <BulletLi>E2e tests with Cypress</BulletLi>
           <BulletLi>Add my tests to ci/cd pipelines such as Github Actions</BulletLi>
           <BulletLi>
