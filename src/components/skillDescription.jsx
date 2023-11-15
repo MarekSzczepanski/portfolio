@@ -84,9 +84,6 @@ const skills = [
           </BulletLi>
           <BulletLi>Creating animations based on various events, such as click or scroll</BulletLi>
           <BulletLi>Creating 3D Three.js animations</BulletLi>
-          <BulletLi>
-            Adding and modifying functionalities for Wordpress themes and Shopify stores
-          </BulletLi>
           <BulletLi>Developing Twitch e-commerce extension</BulletLi>
           <BulletLi>Creating browser mini games</BulletLi>
         </ul>
@@ -143,7 +140,6 @@ const skills = [
           <BulletLi>Styling custom webpages</BulletLi>
           <BulletLi>Creating animations</BulletLi>
           <BulletLi>Styling Twitch e-commerce extension</BulletLi>
-          <BulletLi>Styling Wordpress themes and Shopify stores</BulletLi>
         </ul>
         <H4 color="royalblue">Some of important aspects of css I understand:</H4>
         <ul>

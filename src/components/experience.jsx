@@ -28,6 +28,7 @@ const Container = styled.div`
   }
 `;
 const H5 = styled.h5`
+  border-bottom: 1px solid;
   font-size: 1.5vw;
   @media (max-width: 1023px) {
     margin-top: 0.5vw;
@@ -36,7 +37,6 @@ const H5 = styled.h5`
 `;
 const H6 = styled.h6`
   padding-bottom: 6px;
-  border-bottom: 1px solid;
   font-size: 1.2vw;
   @media (max-width: 1023px) {
     display: inline-block;
@@ -59,31 +59,30 @@ const Experience = () => (
   <Wrap>
     <H3>Experience</H3>
     <Container>
-      <H5>Front-end Developer</H5>
-      <H6>ZABART.COM | 09.2020 - 07.2021</H6>
+      <H5>ZABART.COM | 09.2020 - 07.2021</H5>
+      <H6>Junior Front-end Developer</H6>
       <ul>
-        <Li>Creating webpages based on Wordpress</Li>
-        <Li>Writing custom Javascript code</Li>
+        <Li>Building Small-Medium Business websites UI</Li>
+        <Li>Building landing pages</Li>
+        <Li>Building e-commerce websites</Li>
+        <Li>Writing custom JavaScript code</Li>
         <Li>Manual testing</Li>
         <Li>Recording tutorial videos</Li>
         <Li>Meetings with clients</Li>
       </ul>
     </Container>
     <Container>
-      <H5>Front-end Developer</H5>
-      <H6>THINK IT CODE IT LIMITED | 08.2021 – present</H6>
+      <H5>THINK IT CODE IT LIMITED</H5>
+      <H6>Front-end Developer | 08.2021 - 10.2022</H6>
+      <H6>React Developer | 10.2022 - present</H6>
       <ul>
-        <Li>Developing custom e-commerce website (HTML + CSS + JS)</Li>
+        <Li>Building React App using user's input to generate business slogans and images with OpenAI API</Li>
+        <Li>Creating admin dashboard with React</Li>
+        <Li>Building custom e-commerce website UI</Li>
         <Li>Developing Twitch e-commerce extension</Li>
         <Li>Writing unit and e2e tests</Li>
         <Li>Creating and managing Github Actions CI/CD pipeline</Li>
-        <Li>Doing simple backend tasks</Li>
-        <Li>Managing SQL database</Li>
-        <Li>Creating admin dashboard with React</Li>
-        <Li>Creating Shopify stores</Li>
-        <Li>Creating Landing pages</Li>
         <Li>Creating Three.js animations</Li>
-        <Li>Creating React App using user's input to generate business slogans and images with OpenAI API</Li>
       </ul>
     </Container>
   </Wrap>
