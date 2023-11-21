@@ -89,7 +89,7 @@ const translate1 = {
   y6: '7vw',
   y7: '4vw',
   y8: '2vw',
-  y9: '0vw'
+  y9: '0vw',
 };
 const translate2 = {
   x1: '0vw',
@@ -109,7 +109,7 @@ const translate2 = {
   y6: '=3vw',
   y7: '-4vw',
   y8: '0vw',
-  y9: '0vw'
+  y9: '0vw',
 };
 const translate3 = {
   x1: '0vw',
@@ -129,7 +129,7 @@ const translate3 = {
   y6: '-3vw',
   y7: '.5vw',
   y8: '-.5vw',
-  y9: '-1.5vw'
+  y9: '-1.5vw',
 };
 const translate4 = {
   x1: '0vw',
@@ -149,7 +149,7 @@ const translate4 = {
   y6: '3vw',
   y7: '2vw',
   y8: '3vw',
-  y9: '5vw'
+  y9: '5vw',
 };
 const mTranslate1 = {
   x1: '72vw',
@@ -169,7 +169,7 @@ const mTranslate1 = {
   y6: '11vw',
   y7: '8vw',
   y8: '6vw',
-  y9: '3vw'
+  y9: '3vw',
 };
 const mTranslate3 = {
   x1: '-5vw',
@@ -189,7 +189,7 @@ const mTranslate3 = {
   y6: '5vw',
   y7: '3vw',
   y8: '5vw',
-  y9: '3vw'
+  y9: '3vw',
 };
 const mTranslate4 = {
   x1: '-35vw',
@@ -209,7 +209,7 @@ const mTranslate4 = {
   y6: '-40vw',
   y7: '-38vw',
   y8: '-37vw',
-  y9: '-37vw'
+  y9: '-37vw',
 };
 const nameLetters = [
   'M',
@@ -228,7 +228,7 @@ const nameLetters = [
   'ń',
   's',
   'k',
-  'i'
+  'i',
 ];
 const titleLetters = [
   'F',
@@ -249,7 +249,7 @@ const titleLetters = [
   'o',
   'p',
   'e',
-  'r'
+  'r',
 ];
 const colors = [
   '#FF003F',
@@ -276,7 +276,7 @@ const colors = [
   '#6787E7',
   '#74B72E',
   'orange',
-  'plum'
+  'plum',
 ];
 const colors2 = [
   '#f0DB4F',
@@ -297,7 +297,7 @@ const colors2 = [
   '#68A063',
   '#f0DB4F',
   '#61DBFB',
-  '#68A063'
+  '#68A063',
 ];
 const letterAnimationLocks = [];
 
@@ -378,9 +378,9 @@ const Hero = () => {
           })}
         </H2>
         <About>
-          I'm settled in Ostróda, Poland. I have 3 years of Front-end experience. I like to work with
-          React, Vanilla JavaScript and NodeJS. Coding is a neverending challenge that keeps me
-          excited.
+          I'm settled in Ostróda, Poland. I have 3 years of Front-end
+          experience. I like to work with React, Vanilla JavaScript and NodeJS.
+          Coding is a neverending challenge that keeps me excited.
         </About>
       </div>
       <Blob
@@ -428,7 +428,11 @@ const Hero = () => {
         translate={translate3}
         mTranslate={mTranslate3}
       ></Blob>
-      <a href="https://github.com/MarekSzczepanski" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/MarekSzczepanski"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Blob
           measure="10vw"
           top="1vw"

@@ -54,7 +54,16 @@ const H4 = styled.h4`
   }
 `;
 
-const Project = ({ image, customClass, color, name, fontColor, innerBlobColor, delay, href }) => {
+const Project = ({
+  image,
+  customClass,
+  color,
+  name,
+  fontColor,
+  innerBlobColor,
+  delay,
+  href,
+}) => {
   return (
     <Container
       color={color}

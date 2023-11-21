@@ -27,22 +27,26 @@ const Container = styled.div`
   }
 `;
 
-const IndexPage = () => (
-  <Layout>
-    <Hero></Hero>
-    <ContactButton></ContactButton>
-    <Container>
-      <Skills></Skills>
-      <Experience></Experience>
-    </Container>
-    <Container width="110vw" mobileWidth="90vw" marginLeft="-5vw">
-      <SkillDescription></SkillDescription>
-      <Projects></Projects>
-    </Container>
-    <ThingsILike></ThingsILike>
-    <Footer></Footer>
-  </Layout>
-);
+function IndexPage() {
+  return (
+    <Layout>
+      <Hero />
+      <ContactButton />
+      <Container>
+        <Skills />
+        <Experience />
+      </Container>
+      <Container width="110vw" mobileWidth="90vw" marginLeft="-5vw">
+        <SkillDescription />
+        <Projects />
+      </Container>
+      <ThingsILike />
+      <Footer />
+    </Layout>
+  );
+}
 
-export const Head = () => <Seo title="Marek Szczepański" />;
+export function Head() {
+  return <Seo title="Marek Szczepański" />;
+}
 export default IndexPage;

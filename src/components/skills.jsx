@@ -20,7 +20,7 @@ const translate = {
   y6: '10vw',
   y7: '3vw',
   y8: '10vw',
-  y9: '20vw'
+  y9: '20vw',
 };
 const mTranslate = {
   x1: '-2vw',
@@ -40,7 +40,7 @@ const mTranslate = {
   y6: '20vw',
   y7: '10vw',
   y8: '20vw',
-  y9: '50vw'
+  y9: '50vw',
 };
 const translate1 = {
   x1: '11vw',
@@ -60,7 +60,7 @@ const translate1 = {
   y6: '11vw',
   y7: '10vw',
   y8: '10vw',
-  y9: '12vw'
+  y9: '12vw',
 };
 const translate2 = {
   x1: '11vw',
@@ -80,7 +80,7 @@ const translate2 = {
   y6: '21vw',
   y7: '24vw',
   y8: '20vw',
-  y9: '25vw'
+  y9: '25vw',
 };
 const translate3 = {
   x1: '23vw',
@@ -100,7 +100,7 @@ const translate3 = {
   y6: '23vw',
   y7: '24vw',
   y8: '26vw',
-  y9: '22vw'
+  y9: '22vw',
 };
 const mTranslate1 = {
   x1: '18vw',
@@ -120,7 +120,7 @@ const mTranslate1 = {
   y6: '29vw',
   y7: '26vw',
   y8: '25vw',
-  y9: '30vw'
+  y9: '30vw',
 };
 const mTranslate2 = {
   x1: '15vw',
@@ -140,7 +140,7 @@ const mTranslate2 = {
   y6: '51vw',
   y7: '50vw',
   y8: '55vw',
-  y9: '50vw'
+  y9: '50vw',
 };
 const mTranslate3 = {
   x1: '33vw',
@@ -160,7 +160,7 @@ const mTranslate3 = {
   y6: '70vw',
   y7: '71vw',
   y8: '71vw',
-  y9: '72vw'
+  y9: '72vw',
 };
 const skills = [
   'html',
@@ -198,7 +198,7 @@ const colors = [
   'gold',
   '#6787E7',
   '#74B72E',
-  'orange'
+  'orange',
 ];
 const mottoTops = ['12.35vw', '12.35vw', '32vw', '35.9vw'];
 const mottoLefts = ['-.2%', '39.9%', '47.2%', '-1.35%'];

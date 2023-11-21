@@ -12,7 +12,7 @@ module.exports = {
     title: `Front-end Developer`,
     description: `Web Developer from Poland with 3 years of experience. Likes to work with React and NodeJS, preferably remote.`,
     author: `Marek Szczepański`,
-    siteUrl: `https://szczepanski.ostroda.org/`
+    siteUrl: `https://szczepanski.ostroda.org/`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -20,8 +20,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -36,22 +36,25 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/marek.jpg` // This path is relative to the root of the site.
-      }
+        icon: `src/images/marek.jpg`, // This path is relative to the root of the site.
+      },
     },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
         web: [
           {
             name: `Fonts`,
-            file: `https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Spray+Paint&display=swap`
-          }
-        ]
-      }
-    }
-  ]
+            file: `https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Spray+Paint&display=swap`,
+          },
+        ],
+      },
+    },
+  ],
 };

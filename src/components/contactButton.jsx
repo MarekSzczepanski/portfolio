@@ -22,7 +22,7 @@ const translate = {
   y6: '33vw',
   y7: '33vw',
   y8: '32vw',
-  y9: '29vw'
+  y9: '29vw',
 };
 const mTranslate = {
   x1: '2vw',
@@ -42,7 +42,7 @@ const mTranslate = {
   y6: '18px',
   y7: '17px',
   y8: '19px',
-  y9: '9px'
+  y9: '9px',
 };
 
 const morph = () => keyframes`

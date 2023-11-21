@@ -76,7 +76,10 @@ const Experience = () => (
       <H6>Front-end Developer | 08.2021 - 10.2022</H6>
       <H6>React Developer | 10.2022 - present</H6>
       <ul>
-        <Li>Building React App that uses user's input to generate business ideas, slogans and imagery with OpenAI and Clipdrop APIs</Li>
+        <Li>
+          Building React App that uses user's input to generate business ideas,
+          slogans and imagery with OpenAI and Clipdrop APIs
+        </Li>
         <Li>Creating admin dashboard with React</Li>
         <Li>Building custom e-commerce website UI</Li>
         <Li>Developing Twitch e-commerce extension</Li>

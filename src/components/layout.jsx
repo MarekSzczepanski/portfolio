@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import Header from './header';
 import './layout.css';
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,15 +26,21 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={{ margin: `0 auto`, padding: `5vw 5vw 0`, boxSizing: 'border-box' }}>
+      <div
+        style={{
+          margin: `0 auto`,
+          padding: `5vw 5vw 0`,
+          boxSizing: 'border-box',
+        }}
+      >
         <main>{children}</main>
       </div>
     </>
   );
-};
+}
 
 Layout.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.node,
 };
 
 export default Layout;

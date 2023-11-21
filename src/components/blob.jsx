@@ -94,34 +94,46 @@ const Circle = styled.div`
   border: solid .23vw ${(props) => (props.border ? props.border : '#000')};
   color: ${(props) => (props.colorChange ? 'white' : 'black')};
   overflow: hidden;
-  transform: translate(${(props) => (props.skill ? '-1500px, 150px' : 0)}) scale(${(props) =>
+  transform: translate(${(props) =>
+    props.skill ? '-1500px, 150px' : 0}) scale(${(props) =>
   props.skill ? '0.6' : '1'});
   transition: background-color .2s ease-in, color .2s ease-in;
   animation: 
   ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s,
   ${(props) =>
-    props.translate && !props.colorChange ? Move(props.translate) : null} 23s linear infinite ${(
-  props
-) => (props.delay ? props.delay : 0)}s,
+    props.translate && !props.colorChange
+      ? Move(props.translate)
+      : null} 23s linear infinite ${(props) =>
+  props.delay ? props.delay : 0}s,
   ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite,
-  ${(props) => (props.colorChange ? Move2(props.translate) : null)} 23s linear infinite;
+  ${(props) =>
+    props.colorChange ? Move2(props.translate) : null} 23s linear infinite;
   cursor: ${(props) => (props.cursor ? props.cursor : 'default')};
   z-index: ${(props) => (props.zIndex ? props.zIndex : 0)};
   @media (min-width: 1024px) {
     &:hover {
       > span {
-        color: ${(props) => (props.hoverFontColor ? props.hoverFontColor : null)};
+        color: ${(props) =>
+          props.hoverFontColor ? props.hoverFontColor : null};
       }
-      background-color: ${(props) => (props.hoverColor ? props.hoverColor : null)};
+      background-color: ${(props) =>
+        props.hoverColor ? props.hoverColor : null};
       animation: 
-      ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s, 
+      ${Morph} 11.5s linear infinite ${(props) =>
+  props.delay ? props.delay : 0}s, 
       ${(props) =>
         props.translate && !props.colorChange
           ? Move(props.translate)
-          : null} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s, 
-      ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite, 
-      ${(props) => (props.colorChange ? Move2(props.translate) : null)} 23s linear infinite,
-      ${(props) => (props.colorChange ? BlackAndWhiteText() : null)} .3s linear infinite alternate;
+          : null} 23s linear infinite ${(props) =>
+  props.delay ? props.delay : 0}s, 
+      ${(props) =>
+        props.colorChange ? ColorChange() : null} 23s linear infinite, 
+      ${(props) =>
+        props.colorChange ? Move2(props.translate) : null} 23s linear infinite,
+      ${(props) =>
+        props.colorChange
+          ? BlackAndWhiteText()
+          : null} .3s linear infinite alternate;
     }
   }
   @media (max-width: 1023px) {
@@ -132,14 +144,19 @@ const Circle = styled.div`
     height: ${(props) => props.mMeasure};
     border-width: 3px;
     animation: 
-    ${Morph} 11.5s linear infinite ${(props) => (props.delay ? props.delay : 0)}s,
-    ${(props) => (props.colorChange ? ColorChange() : null)} 23s linear infinite,
+    ${Morph} 11.5s linear infinite ${(props) =>
+  props.delay ? props.delay : 0}s,
     ${(props) =>
-      props.colorChange ? Move2(props.mTranslate) : null} 23s linear infinite alternate,
+      props.colorChange ? ColorChange() : null} 23s linear infinite,
+    ${(props) =>
+      props.colorChange
+        ? Move2(props.mTranslate)
+        : null} 23s linear infinite alternate,
     ${(props) =>
       props.mTranslate && !props.colorChange
         ? Move(props.mTranslate)
-        : null} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s;
+        : null} 23s linear infinite ${(props) =>
+  props.delay ? props.delay : 0}s;
     }
   }
   > div {
@@ -154,7 +171,8 @@ const Text = styled.span`
     ${(props) => (props.delay ? props.delay : 0)}s;
   @media (max-width: 1023px) {
     font-size: 4vw;
-    animation: ${RotateBack(0)} 23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s
+    animation: ${RotateBack(0)} 23s linear infinite
+      ${(props) => (props.delay ? props.delay : 0)}s
       ${(props) => (props.colorChange ? 'alternate' : null)};
   }
 `;
@@ -165,11 +183,12 @@ const StaticText = styled.span`
 `;
 const BlobImageContainer = styled.div`
   height: 100%;
-  animation: ${(props) => (props.rotate ? RotateBack('0deg') : props.rotateBack)} 23s linear
-    infinite ${(props) => (props.delay ? props.delay : 0)}s;
+  animation: ${(props) =>
+      props.rotate ? RotateBack('0deg') : props.rotateBack}
+    23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s;
   @media (max-width: 1023px) {
-    animation: ${(props) => (props.rotate ? RotateBack(0) : props.rotateBack)} 23s linear infinite
-      ${(props) => (props.delay ? props.delay : 0)}s;
+    animation: ${(props) => (props.rotate ? RotateBack(0) : props.rotateBack)}
+      23s linear infinite ${(props) => (props.delay ? props.delay : 0)}s;
   }
 `;
 
@@ -181,7 +200,7 @@ const ImageStatic = (props) => {
         className={props.customClass}
         alt="profile"
         style={{
-          height: '100%'
+          height: '100%',
         }}
       />
     </BlobImageContainer>
@@ -198,7 +217,7 @@ const ImageRotateBack = (props) => {
         style={{
           height: '100%',
           transform: 'scale(1.2)',
-          filter: 'invert(.18)'
+          filter: 'invert(.18)',
         }}
       />
     </BlobImageContainer>
@@ -231,7 +250,7 @@ const Blob = ({
   rotateBack,
   cursor,
   hoverColor,
-  hoverFontColor
+  hoverFontColor,
 }) => {
   return (
     <Wrap onClick={handleContactBlobClick}>
@@ -258,7 +277,10 @@ const Blob = ({
         hoverFontColor={hoverFontColor}
       >
         {image && rotateBack ? (
-          <ImageRotateBack image={image} customClass={customClass}></ImageRotateBack>
+          <ImageRotateBack
+            image={image}
+            customClass={customClass}
+          ></ImageRotateBack>
         ) : null}
         {image && !rotateBack ? (
           <ImageStatic image={image} customClass={customClass}></ImageStatic>
@@ -269,7 +291,11 @@ const Blob = ({
           </Text>
         ) : null}
         {text && !rotateBack ? (
-          <StaticText fontSize={fontSize} fontColor={fontColor} hoverFontColor={hoverFontColor}>
+          <StaticText
+            fontSize={fontSize}
+            fontColor={fontColor}
+            hoverFontColor={hoverFontColor}
+          >
             {text}
           </StaticText>
         ) : null}

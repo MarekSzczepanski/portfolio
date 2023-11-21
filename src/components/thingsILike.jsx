@@ -33,7 +33,7 @@ import {
   CabinImage,
   WalkImage,
   BlockchainImageMobile,
-  GuitarImageMobile
+  GuitarImageMobile,
 } from './gatsbyImages';
 
 const Container = styled.div`
@@ -134,7 +134,8 @@ const AnimationWrap = styled.div`
   grid-area: ${(props) => props.grid};
   width: ${(props) => props.width};
   height: ${(props) => (props.height ? props.height : null)};
-  animation: ${(props) => props.animation} ${(props) => (props.duration ? props.duration : '3s')}
+  animation: ${(props) => props.animation}
+    ${(props) => (props.duration ? props.duration : '3s')}
     ${(props) => (props.timing ? props.timing : 'linear')}
     ${(props) => (props.delay ? props.delay : '0s')} infinite;
   ${(props) => (props.direction ? props.direction : null)}
@@ -172,7 +173,7 @@ const verticalTextLetters = [
   '1',
   '1',
   '0',
-  '1'
+  '1',
 ];
 const VerticalText = styled.div`
   position: absolute;
@@ -180,7 +181,8 @@ const VerticalText = styled.div`
   left: 100vw;
   height: 1.3vw;
   font-size: 1.3vw;
-  animation: ${BinaryTextAnimation} 6s linear infinite ${(props) => props.delay}s;
+  animation: ${BinaryTextAnimation} 6s linear infinite
+    ${(props) => props.delay}s;
 `;
 const TreeWrap = styled.div`
   position: relative;
@@ -314,7 +316,13 @@ const ThingsILike = () => {
               </VerticalTextContainer>
 
               {networkImages.map((image, i) => {
-                return <NetworkImage top={image.top} left={image.left} key={i}></NetworkImage>;
+                return (
+                  <NetworkImage
+                    top={image.top}
+                    left={image.left}
+                    key={i}
+                  ></NetworkImage>
+                );
               })}
             </Web3Container>
           </Slide>
@@ -438,7 +446,13 @@ const ThingsILike = () => {
               position="absolute"
               delay="-8"
             ></Blob>
-            <Blob color="forestgreen" top="13%" left="35%" measure="58%" position="absolute"></Blob>
+            <Blob
+              color="forestgreen"
+              top="13%"
+              left="35%"
+              measure="58%"
+              position="absolute"
+            ></Blob>
             <Blob
               color="#74B72E"
               top="27%"

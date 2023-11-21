@@ -90,7 +90,8 @@ const projects = [
     description:
       'This application allows users to draw three different Charizard Pokemon cards from the Pokemon TCG API.',
     goal: 'Learning Jest + RTL, React Query, Formik, Husky',
-    stack: 'React + TypeScript, Redux, React Query, Axios, MSW, Formik, ESLint (Airbnb preset) + Prettier, MUI, Jest + RTL, Husky'
+    stack:
+      'React + TypeScript, Redux, React Query, Axios, MSW, Formik, ESLint (Airbnb preset) + Prettier, MUI, Jest + RTL, Husky',
   },
   {
     color: 'plum',
@@ -104,7 +105,8 @@ const projects = [
     description:
       'This app counts average population of chosen regions of chosen countries in chosen time period.',
     goal: 'Learning Redux, TypeScript, ESLint',
-    stack: 'React + TypeScript, Redux, ESLint (Google preset) + Prettier, Material UI, Styled Components'
+    stack:
+      'React + TypeScript, Redux, ESLint (Google preset) + Prettier, Material UI, Styled Components',
   },
   {
     color: '#74B72E',
@@ -117,7 +119,7 @@ const projects = [
       "The webpage I created for my local freelance business. I am open for a non-competition agreement and quiting freelancing, \
     if that's required.",
     goal: 'Learning React, Gatsby, Headless CMS, SEO for SPA webpages',
-    stack: 'React, Gatsby, Wordpress, GraphQL, Headless CMS'
+    stack: 'React, Gatsby, Wordpress, GraphQL, Headless CMS',
   },
   {
     color: 'royalblue',
@@ -133,7 +135,7 @@ const projects = [
     cryptocurrency and counts current profit (or loss) of the user. This kind of fetch also happens after each log in for all the \
     transactions.",
     goal: 'Learning React, NodeJS + Express',
-    stack: 'React, NodeJS + Express, MySQL, Material UI, REST API'
+    stack: 'React, NodeJS + Express, MySQL, Material UI, REST API',
   },
   {
     color: 'gold',
@@ -147,7 +149,7 @@ const projects = [
     description:
       'The application allows users to upload their own video file on the page by using Front-end interface.',
     goal: "Learning NodeJS + Express and it's deployment, EJS templates rendering",
-    stack: 'NodeJS + Express, MySQL, EJS, REST API'
+    stack: 'NodeJS + Express, MySQL, EJS, REST API',
   },
   {
     color: 'crimson',
@@ -160,8 +162,8 @@ const projects = [
     description:
       'Simple adventure is a browser turn based game with a fantasy/medieval theme. The project is made for desktop view only.',
     goal: 'Learning Object Oriented JavaScript',
-    stack: 'Vanilla JavaScript'
-  }
+    stack: 'Vanilla JavaScript',
+  },
 ];
 
 const Projects = () => {
@@ -191,7 +193,8 @@ const Projects = () => {
                   <Span color={project.color}>Stack:</Span> {project.stack}
                 </H4>
                 <P>
-                  <Span color={project.color}>Description:</Span> {project.description}
+                  <Span color={project.color}>Description:</Span>{' '}
+                  {project.description}
                 </P>
               </ProjectDescription>
             </ProjectContainer>

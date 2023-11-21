@@ -3,10 +3,12 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-const Image = ({ src, ...rest }) => {
+function Image({ src, className, alt, style }) {
   const data = useStaticQuery(graphql`
     query {
-      images: allFile(filter: { internal: { mediaType: { regex: "/image/" } } }) {
+      images: allFile(
+        filter: { internal: { mediaType: { regex: "/image/" } } }
+      ) {
         edges {
           node {
             relativePath
@@ -37,15 +39,25 @@ const Image = ({ src, ...rest }) => {
   const { node: { childImageSharp, publicURL, extension } = {} } = match;
 
   if (extension === 'svg' || !childImageSharp) {
-    return <img src={publicURL} {...rest} alt="" />;
+    return (
+      <img src={publicURL} alt={alt} className={className} style={style} />
+    );
   }
 
-  return <Img fluid={childImageSharp.fluid} {...rest} />;
-};
+  return (
+    <Img
+      fluid={childImageSharp.fluid}
+      src={publicURL}
+      alt={alt}
+      className={className}
+      style={style}
+    />
+  );
+}
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string
+  alt: PropTypes.string,
 };
 
 export default Image;

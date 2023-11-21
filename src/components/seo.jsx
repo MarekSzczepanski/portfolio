@@ -46,7 +46,7 @@ function Seo({ description, title, children }) {
 Seo.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
-  children: PropTypes.string
+  children: PropTypes.node,
 };
 
 export default Seo;

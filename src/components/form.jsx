@@ -93,10 +93,31 @@ const Button = styled.button`
 const Form = () => (
   <>
     <H3>Contact me</H3>
-    <FormComponent action="https://getform.io/f/7d858909-0b80-442d-8352-ae3ac90bc05f" method="POST">
-      <Input type="text" name="name" placeholder="NAME" width="25vmin" marginLeft="0" />
-      <Input type="email" name="email" placeholder="EMAIL" width="42vmin" marginLeft="3vmin" />
-      <Input type="text" name="subject" placeholder="SUBJECT" width="70vmin" marginLeft="0" />
+    <FormComponent
+      action="https://getform.io/f/7d858909-0b80-442d-8352-ae3ac90bc05f"
+      method="POST"
+    >
+      <Input
+        type="text"
+        name="name"
+        placeholder="NAME"
+        width="25vmin"
+        marginLeft="0"
+      />
+      <Input
+        type="email"
+        name="email"
+        placeholder="EMAIL"
+        width="42vmin"
+        marginLeft="3vmin"
+      />
+      <Input
+        type="text"
+        name="subject"
+        placeholder="SUBJECT"
+        width="70vmin"
+        marginLeft="0"
+      />
       <Textarea name="message" placeholder="MESSAGE" />
       <input type="hidden" className="display-none" name="_gotcha" />
       <Button type="submit">Send</Button>
