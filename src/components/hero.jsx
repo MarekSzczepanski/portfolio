@@ -381,7 +381,7 @@ const Hero = () => {
         </H2>
         <About>
           I'm settled in Ostróda, Poland. I have 3 years of Front-end
-          experience. I like to work with React, Vanilla JavaScript and NodeJS.
+          experience. I like to work with React, TypeScript and NodeJS.
           Coding is a neverending challenge that keeps me excited.
         </About>
       </div>
