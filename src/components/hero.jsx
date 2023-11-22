@@ -302,7 +302,8 @@ const colors2 = [
 const letterAnimationLocks = [];
 
 letterAnimationLocks[0] = null;
-for (let i = 0; i < nameLetters.length + titleLetters.length + 2; i++) {
+const length = nameLetters.length + titleLetters.length + 2;
+for (let i = 0; i < length; i++) {
   letterAnimationLocks[i + 1] = null;
 }
 
@@ -312,7 +313,8 @@ const Hero = () => {
   const nameRefs = useMemo(() => {
     const refs = {};
     refs[0] = {};
-    for (let i = 0; i < nameLetters.length + titleLetters.length + 2; i++) {
+    const length = nameLetters.length + titleLetters.length + 2;
+    for (let i = 0; i < length; i++) {
       refs[i + 1] = React.createRef(null);
     }
     return refs;
