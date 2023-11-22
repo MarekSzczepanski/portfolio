@@ -171,9 +171,9 @@ const Projects = () => {
     <Container>
       <H3>my projects</H3>
       <ProjectsContainer>
-        {projects.map((project, i) => {
+        {projects.map((project) => {
           return (
-            <ProjectContainer>
+            <ProjectContainer key={project.name}>
               <Project
                 customClass={project.customClass}
                 color={project.color}
@@ -183,7 +183,7 @@ const Projects = () => {
                 name={project.name}
                 delay={project.delay}
                 href={project.href}
-                key={i}
+                key={project.name}
               ></Project>
               <ProjectDescription>
                 <H4>

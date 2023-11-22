@@ -367,7 +367,7 @@ const SkillDescription = () => {
     >
       <Section isBorderHidden={true}>
         <Ul translate={translate}>
-          {skills.map((skill, i) => {
+          {skills.map((skill) => {
             return (
               <Li key={skill.heading}>
                 <h3>my {skill.heading}</h3>

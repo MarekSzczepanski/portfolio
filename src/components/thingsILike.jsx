@@ -238,7 +238,7 @@ const ThingsILike = () => {
                         top={treeContainers[i].top}
                         left={treeContainers[i].left}
                         zIndex={treeContainers[i].zIndex}
-                        key={i}
+                        key={treeContainers[i].top + treeContainers[i].left}
                       >
                         <TreeImage
                           image={'tree.png'}
@@ -315,12 +315,12 @@ const ThingsILike = () => {
                 })}
               </VerticalTextContainer>
 
-              {networkImages.map((image, i) => {
+              {networkImages.map((image) => {
                 return (
                   <NetworkImage
                     top={image.top}
                     left={image.left}
-                    key={i}
+                    key={image.top + image.left}
                   ></NetworkImage>
                 );
               })}
@@ -342,7 +342,7 @@ const ThingsILike = () => {
                 ></Blob>
               </SkewedBlobContainer>
 
-              {mainPowerMetalImages.map((image, i) => {
+              {mainPowerMetalImages.map((image) => {
                 return (
                   <AnimationWrap
                     grid={image.grid}
@@ -352,13 +352,13 @@ const ThingsILike = () => {
                     delay={image.delay}
                     timing={image.timing}
                     origin={image.origin}
-                    key={i}
+                    key={image.grid}
                   >
                     {image.image}
                   </AnimationWrap>
                 );
               })}
-              {noteImages.map((image, i) => {
+              {noteImages.map((image) => {
                 return (
                   <AnimationWrap
                     position="absolute"
@@ -370,13 +370,13 @@ const ThingsILike = () => {
                       `rotate(${image.rotate2}) translateY(1vw)`
                     )}
                     delay={image.delay}
-                    key={i}
+                    key={image.top + image.left}
                   >
                     {NoteImage()}
                   </AnimationWrap>
                 );
               })}
-              {starImages.map((image, i) => {
+              {starImages.map((image) => {
                 return (
                   <AnimationWrap
                     position="absolute"
@@ -385,13 +385,13 @@ const ThingsILike = () => {
                     width={'5vw'}
                     animation={star}
                     duration="6s"
-                    key={i}
+                    key={image.top + image.left}
                   >
                     {LightImage()}
                   </AnimationWrap>
                 );
               })}
-              {lightningImages.map((image, i) => {
+              {lightningImages.map((image) => {
                 return (
                   <AnimationWrap
                     position="absolute"
@@ -401,7 +401,7 @@ const ThingsILike = () => {
                     animation={thunder}
                     easing="ease-in"
                     delay={image.delay}
-                    key={i}
+                    key={image.top + image.left}
                   >
                     {LightningImage()}
                   </AnimationWrap>
@@ -416,7 +416,7 @@ const ThingsILike = () => {
         <BlockchainImageMobile></BlockchainImageMobile>
         <H4>Power Metal Music</H4>
         <GuitarImageMobile></GuitarImageMobile>
-        {noteImages.map((image, i) => {
+        {noteImages.map((image) => {
           return (
             <AnimationWrap
               position="absolute"
@@ -428,7 +428,7 @@ const ThingsILike = () => {
                 `rotate(${image.rotate2}) translateY(1vw)`
               )}
               delay={image.delay}
-              key={i}
+              key={image.mTop + image.mLeft}
             >
               {NoteImage()}
             </AnimationWrap>

@@ -234,7 +234,7 @@ const Skills = () => (
     {mottoTops.map(function (object, i) {
       return (
         <MottoPart
-          key={i}
+          key={mottoPartWords[i]}
           top={mottoTops[i]}
           left={mottoLefts[i]}
           rotate={mottoRotates[i]}
@@ -247,7 +247,7 @@ const Skills = () => (
     {skills.map(function (object, i) {
       return (
         <Blob
-          key={i}
+          key={skills[i]}
           color={colors[i]}
           border={'black'}
           text={skills[i]}
