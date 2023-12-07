@@ -331,16 +331,72 @@ const Hero = () => {
   }, [isLetterHovered]);
 
   const handleMouseEnter = (e) => {
-    if (e.target.dataset.letter) {
-      if (!letterAnimationLocks[Number(e.target.dataset.letter)]) {
-        setIsLetterHovered(Number(e.target.dataset.letter));
-        letterAnimationLocks[Number(e.target.dataset.letter)] = true;
+    const letter = e.target.dataset.letter;
+    if (letter) {
+      const letterNum = Number(letter);
+      if (!letterAnimationLocks[letterNum]) {
+        setIsLetterHovered(letterNum );
+        letterAnimationLocks[letterNum] = true;
         setTimeout(() => {
-          letterAnimationLocks[Number(e.target.dataset.letter)] = null;
+          letterAnimationLocks[letterNum] = null;
         }, 1000);
       }
     }
   };
+
+  const renderBlobs = () => {
+    const blobsProps = [
+      {
+        color: "gray",
+        measure: "33.5vw",
+        top: "5vw",
+        left: "60vw",
+        mMeasure: "48vw",
+        mTop: "10px",
+        mLeft: "49vw",
+        image: 'marek.jpg',
+      },
+      {
+        color: "royalblue",
+        measure: "12vw",
+        top: "3vw",
+        left: "22vw",
+        delay: "-3",
+        mMeasure: "20vw",
+        mTop: "2vw",
+        mLeft: "5vw",
+        translate: translate1,
+        mTranslate: mTranslate1,
+      },
+      {
+        color: "gold",
+        measure: "10vw",
+        top: "25vw",
+        left: "60vw",
+        delay: "-5",
+        mMeasure: "14vw",
+        mLeft: "45vw",
+        translate: translate2,
+        mTranslate: translate2,
+      },
+      {
+        color: "crimson",
+        measure: "13vw",
+        top: "4vw",
+        left: "85vw",
+        delay: "-1",
+        mMeasure: "22vw",
+        mTop: "40vw",
+        mLeft: "75vw",
+        translate: translate3,
+        mTranslate: mTranslate3,
+      }
+    ]
+    return blobsProps.map((prop) => {
+      const {color, measure, top, left, mMeasure, mTop, mLeft, image, translate, mTranslate} = prop;
+      return <Blob color={color} measure={measure} top={top} left={left} mMeasure={mMeasure} mTop={mTop} mLeft={mLeft} image={image} translate={translate} mTranslate={mTranslate}></Blob>
+    })
+  }
 
   return (
     <>
@@ -385,51 +441,7 @@ const Hero = () => {
           Coding is a neverending challenge that keeps me excited.
         </About>
       </div>
-      <Blob
-        color="gray"
-        measure="33.5vw"
-        top="5vw"
-        left="60vw"
-        mMeasure="48vw"
-        mTop="10px"
-        mLeft="49vw"
-        image={'marek.jpg'}
-      ></Blob>
-      <Blob
-        color="royalblue"
-        measure="12vw"
-        top="3vw"
-        left="22vw"
-        delay="-3"
-        mMeasure="20vw"
-        mTop="2vw"
-        mLeft="5vw"
-        translate={translate1}
-        mTranslate={mTranslate1}
-      ></Blob>
-      <Blob
-        color="gold"
-        measure="10vw"
-        top="25vw"
-        left="60vw"
-        delay="-5"
-        mMeasure="14vw"
-        mLeft="45vw"
-        translate={translate2}
-        mTranslate={translate2}
-      ></Blob>
-      <Blob
-        color="crimson"
-        measure="13vw"
-        top="4vw"
-        left="85vw"
-        delay="-1"
-        mMeasure="22vw"
-        mTop="40vw"
-        mLeft="75vw"
-        translate={translate3}
-        mTranslate={mTranslate3}
-      ></Blob>
+      {renderBlobs()}
       <a
         href="https://github.com/MarekSzczepanski"
         target="_blank"
